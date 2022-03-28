@@ -9,13 +9,23 @@ module.exports = {
         'search': '0px 3px 6px rgba(255, 255, 255, .77)',
       },
       colors: {
-        'black-1': '#252525',
-        'brown-1': '#8C7065',
-        'grey-1': '#b2b2b2',
-        'pink-1': '#f49898', 
-        'red-1': '#f14d4c',
-        'red-2': '#732525',
-        'white-1': '#fff',
+        'black': {
+          DEFAULT: '#000',
+          'light': '#252525',
+        },
+        'brown': {
+          DEFAULT: '#8C7065',
+        },
+        'grey': {
+          DEFAULT: '#b2b2b2',
+        },
+        'pink': {
+          DEFAULT: '#f49898',
+        },
+        'red': {
+          DEFAULT: '#f14d4c',
+          'dark': '#732525'
+        },
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
