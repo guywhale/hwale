@@ -36,6 +36,21 @@
                 "wpackagist-plugin/*",
                 "wpackagist-theme/*"
             ]
+        },
+        {
+            "type": "package",
+            "package": {
+              "name": "advanced-custom-fields/advanced-custom-fields-pro",
+              "version": "5.12.1",
+              "type": "wordpress-plugin",
+              "dist": {
+                "type": "zip",
+                "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_LICENSE}&t={%version}"
+              },
+              "require": {
+                "ffraenz/private-composer-installer": "^5.0"
+              }
+            }
         }
     ],
     "require": {
@@ -48,7 +63,8 @@
         "roots/wordpress": "5.9.2",
         "roots/wp-config": "1.0.0",
         "roots/wp-password-bcrypt": "1.1.0",
-        "roots/acorn": "^2.0"
+        "roots/acorn": "^2.0",
+        "advanced-custom-fields/advanced-custom-fields-pro": "*"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.6.2",
@@ -76,7 +92,11 @@
                 "type:wordpress-theme"
             ]
         },
-        "wordpress-install-dir": "web/wp"
+        "wordpress-install-dir": "web/wp",
+        "private-composer-installer": {
+            "dotenv-path": ".",
+            "dotenv-name": ".env"
+        }
     },
     "scripts": {
         "post-root-package-install": [
