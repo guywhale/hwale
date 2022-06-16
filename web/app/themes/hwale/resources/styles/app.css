@@ -28,4 +28,8 @@
   svg #logoCursor {
     @apply group-hover:animate-blinking-cursor group-focus:animate-blinking-cursor group-active:animate-blinking-cursor;
   }
+
+  svg #scope {
+    @apply transition-all;
+  }
 }

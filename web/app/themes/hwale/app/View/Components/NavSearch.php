@@ -6,6 +6,8 @@ use Illuminate\View\Component;
 
 class NavSearch extends Component
 {
+    public $isSearchPage;
+
     /**
      * Create a new component instance.
      *
@@ -13,7 +15,7 @@ class NavSearch extends Component
      */
     public function __construct()
     {
-        //
+        $this->isSearchPage = is_search() ? 'true' : 'false';
     }
 
     /**

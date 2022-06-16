@@ -12,7 +12,7 @@ const main = async (err) => {
   }
 
   // application code
-  // window.Alpine = Alpine;
+  window.Alpine = Alpine;
 
   Alpine.start();
 
