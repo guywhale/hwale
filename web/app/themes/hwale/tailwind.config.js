@@ -2,6 +2,9 @@ module.exports = {
   content: ['./app/**/*.php', './resources/**/*.{php,vue,js}'],
   theme: {
     extend: {
+      animation:{
+        'blinking-cursor': 'blinkingCursor .75s ease-in infinite alternate;',
+      },
       boxShadow: {
         'button': '-3px 3px 6px rgba(255, 255, 255, .4)',
         'button-hover': '0 0 6px rgba(255, 255, 255, .4)',
@@ -74,6 +77,12 @@ module.exports = {
         'nav-search': ['0.875rem', '1.5rem'],
         'nav-search-lg': ['2.1875rem', '3.75rem'],
         'nav-search-sm': ['1.625rem', '1.875rem'],
+      },
+      keyframes: {
+        blinkingCursor: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
       },
       spacing: {
         '3.75': '0.9375rem',

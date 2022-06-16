@@ -1,7 +1,7 @@
 <header class="banner">
   <div class="container relative flex items-center justify-between pt-6">
-    <a class="brand" href="{{ home_url('/') }}">
-      {!! $siteName !!}
+    <a class="brand group" href="{{ home_url('/') }}">
+      {!! get_svg('images.logo') !!}
     </a>
 
     @if (has_nav_menu('primary_navigation'))

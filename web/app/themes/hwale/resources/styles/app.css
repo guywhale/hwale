@@ -23,3 +23,9 @@
       @apply hidden;
     }
 }
+
+@layer components {
+  svg #logoCursor {
+    @apply group-hover:animate-blinking-cursor group-focus:animate-blinking-cursor group-active:animate-blinking-cursor;
+  }
+}
