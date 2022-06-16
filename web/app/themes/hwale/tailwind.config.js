@@ -70,6 +70,10 @@ module.exports = {
         'nav-search': ['0.875rem', '1.5rem'],
         'nav-search-lg': ['2.1875rem', '3.75rem'],
         'nav-search-sm': ['1.625rem', '1.875rem'],
+      },
+      spacing: {
+        '3.75': '0.9375rem',
+        '6.25': '1.5625rem',
       }
     },
   },
