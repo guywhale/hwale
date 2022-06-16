@@ -3,25 +3,25 @@
 @import 'tailwindcss/utilities';
 
 @layer base {
-    body {
-        @apply font-normal text-white font-poppins text-body bg-black-light selection:bg-white selection:text-black-light;
-    }
+  body {
+    @apply font-normal text-white font-poppins text-body bg-black-light selection:bg-white selection:text-black-light;
+  }
 
-    h1 {
-        @apply font-thin uppercase text-h1;
-    }
+  h1 {
+    @apply font-thin uppercase text-h1;
+  }
 
-    h2 {
-        @apply font-bold text-h2-sm md:text-h2-md lg:text-h2;
-    }
+  h2 {
+    @apply font-bold text-h2-sm md:text-h2-md lg:text-h2;
+  }
 
-    h3 {
-        @apply font-bold text-h3;
-    }
+  h3 {
+    @apply font-bold text-h3;
+  }
 
-    input[type=search]::-webkit-search-cancel-button {
-      @apply hidden;
-    }
+  input[type="search"]::-webkit-search-cancel-button {
+    @apply hidden;
+  }
 }
 
 @layer components {
