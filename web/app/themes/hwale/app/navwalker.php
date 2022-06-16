@@ -4,10 +4,6 @@ namespace App;
 
 class MainNavWalker extends \Walker_Nav_Menu
 {
-    /*
-    Ensures that the correct nav item is highlighted as current no matter which page,
-    single post or taxonomy archive the user is on.s
-    */
     public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0)
     {
         $itemClasses = implode(" ", $item->classes);
