@@ -10,19 +10,19 @@ class MainNavWalker extends \Walker_Nav_Menu
         $itemClasses .= ' py-3.75 px-0 lg:py-0 lg:px-6 2xl:px-11.25';
         $currentAria = '';
         $linkClasses = 'relative flex flex-wrap items-center overflow-hidden group';
-        $numberClasses = 'nav-number-sm md:text-nav-number-lg lg:text-nav-number basis-full max-w-full mb-0.5';
+        $numberClasses = 'w-10.75 md:w-15.5 nav-number-sm md:text-nav-number-lg lg:w-auto lg:text-nav-number lg:basis-full lg:max-w-full lg:mb-0.5';
         $numberColour = 'text-grey';
-        $interactClasses = 'group-hover:translate-x-0 group-active:translate-x-0 group-focus:translate-x-0 transition-transform';
-        $lineColourPosition = 'bg-grey -translate-x-3.75';
-        $lineClasses = 'relative left-0 w-3.75 h-0.5 mr-2.5';
-        $titlePosition = '-translate-x-6.25';
+        $interactClasses = 'lg:group-hover:translate-x-0 lg:group-active:translate-x-0 lg:group-focus:translate-x-0 transition-all';
+        $lineColourPosition = 'bg-grey lg:-translate-x-3.75';
+        $lineClasses = 'relative top-1/2 w-full h-1 max-w-0 group-hover:max-w-7.5 md:h-1.5 lg:top-unset left-0 lg:max-w-full lg:w-3.75 lg:h-0.5 lg:mr-2.5';
+        $titlePosition = 'translate-x-0 group-hover:translate-x-3.75 lg:-translate-x-6.25';
         $titleClasses = 'text-nav-sm md:text-nav-lg lg:text-nav';
 
         if ($item->current) {
             $currentAria = 'aria-current="page"';
             $numberColour = 'text-red';
-            $lineColourPosition = 'bg-red translate-x-0';
-            $titlePosition = 'translate-x-0';
+            $lineColourPosition = 'bg-red max-w-[30px] lg:translate-x-0';
+            $titlePosition = 'translate-x-3.75 lg:translate-x-0';
         }
 
         $output .= "<li id=\"menu-item-{$item->ID}\" class=\"{$itemClasses}\">";

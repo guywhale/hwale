@@ -1,6 +1,6 @@
 <form action="/"
   method="GET"
-  class="relative flex flex-col pl-6 2xl:pl-11.25 group"
+  class="relative flex flex-wrap items-center max-w-xs md:max-w-md lg:max-w-full lg:items-start lg:flex-col lg:flex-nowrap py-3.75 lg:py-0 lg:pl-6 2xl:pl-11.25 group"
   x-data="{
     active: {{ $isSearchPage }},
     telescopeUp() {
@@ -14,23 +14,23 @@
   }"
   x-init="active ? telescopeUp() : ''"
 >
-  <span class="nav-number-sm md:text-nav-number-lg lg:text-nav-number mb-0.5 transition-colors"
-    :class="active ? 'text-red' : ''"
+  <span class="w-10.75 md:w-15.5 lg:w-auto nav-number-sm md:text-nav-number-lg lg:text-nav-number lg:mb-0.5 transition-colors"
+    :class="active ? 'text-red' : 'text-grey'"
   >
-    06
+    05
   </span>
-  <label for="navSearch" class="text-nav-sm md:text-nav-lg lg:text-nav">Search</label>
+  <label for="navSearch" class="text-nav-sm mb-2.5 md:mb-0 md:text-nav-lg lg:text-nav">Search</label>
   <input type="search"
     name="s"
     id="navSearch"
-    class="text-nav-search-sm md:text-nav-search-lg lg:text-nav-search pr-8.5 w-40 rounded-none bg-transparent border-t-0 border-r-0 border-b-2 border-l-0 text-white focus:outline-none active:outline-none transition-colors"
+    class="basis-full text-nav-search-sm md:text-nav-search-lg ml-10.75 md:ml-15.5 lg:ml-0 lg:text-nav-search pr-10 md:pr-12 lg:pr-8.5 w-40 rounded-none bg-transparent border-t-0 border-r-0 border-b-2 border-l-0 text-white focus:outline-none active:outline-none transition-colors"
     @focus="active = true; telescopeUp()"
     @blur="active = {{ $isSearchPage }}; telescopeDown()"
     :class="active ? 'border-b-red' : 'border-b-grey'"
   >
   <button type="submit"
-    class="absolute bottom-0 right-0"
+    class="absolute bottom-3.75 right-0 lg:bottom-0"
   >
-    {!! get_svg('images.telescope-down', 'w-auto h-6') !!}
+    {!! get_svg('images.telescope-down', 'w-auto h-7.5 md:h-10 lg:h-6') !!}
   </button>
 </form>
