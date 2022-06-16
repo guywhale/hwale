@@ -10,13 +10,13 @@ class MainNavWalker extends \Walker_Nav_Menu
         $itemClasses .= ' py-3.75 px-0 lg:py-0 lg:px-6 2xl:px-11.25';
         $currentAria = '';
         $linkClasses = 'relative flex flex-wrap items-center overflow-hidden group';
-        $numberClasses = 'nav-number-sm lg:text-nav-number-lg xl:text-nav-number basis-full max-w-full mb-0.5';
+        $numberClasses = 'nav-number-sm md:text-nav-number-lg lg:text-nav-number basis-full max-w-full mb-0.5';
         $numberColour = 'text-grey';
         $interactClasses = 'group-hover:translate-x-0 group-active:translate-x-0 group-focus:translate-x-0 transition-transform';
         $lineColourPosition = 'bg-grey -translate-x-3.75';
         $lineClasses = 'relative left-0 w-3.75 h-0.5 mr-2.5';
         $titlePosition = '-translate-x-6.25';
-        $titleClasses = 'text-nav-sm lg:text-nav-lg xl:text-nav';
+        $titleClasses = 'text-nav-sm md:text-nav-lg lg:text-nav';
 
         if ($item->current) {
             $currentAria = 'aria-current="page"';

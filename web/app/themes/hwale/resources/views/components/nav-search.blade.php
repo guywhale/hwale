@@ -14,16 +14,16 @@
   }"
   x-init="active ? telescopeUp() : ''"
 >
-  <span class="nav-number-sm lg:text-nav-number-lg xl:text-nav-number mb-0.5 transition-colors"
+  <span class="nav-number-sm md:text-nav-number-lg lg:text-nav-number mb-0.5 transition-colors"
     :class="active ? 'text-red' : ''"
   >
     06
   </span>
-  <label for="navSearch" class="text-nav-sm lg:text-nav-lg xl:text-nav">Search</label>
+  <label for="navSearch" class="text-nav-sm md:text-nav-lg lg:text-nav">Search</label>
   <input type="search"
     name="s"
     id="navSearch"
-    class="text-nav-search-sm lg:text-nav-search-lg xl:text-nav-search pr-8.5 w-40 rounded-none bg-transparent border-t-0 border-r-0 border-b-2 border-l-0 text-white focus:outline-none active:outline-none transition-colors"
+    class="text-nav-search-sm md:text-nav-search-lg lg:text-nav-search pr-8.5 w-40 rounded-none bg-transparent border-t-0 border-r-0 border-b-2 border-l-0 text-white focus:outline-none active:outline-none transition-colors"
     @focus="active = true; telescopeUp()"
     @blur="active = {{ $isSearchPage }}; telescopeDown()"
     :class="active ? 'border-b-red' : 'border-b-grey'"
