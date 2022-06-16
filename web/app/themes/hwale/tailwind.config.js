@@ -27,6 +27,10 @@ module.exports = {
           'dark': '#732525'
         },
       },
+      container: {
+        center: true,
+        padding: '0.9375rem',
+      },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
         'dm-sans': ['DM Sans', 'sans-serif'],
@@ -74,6 +78,8 @@ module.exports = {
       spacing: {
         '3.75': '0.9375rem',
         '6.25': '1.5625rem',
+        '8.5': '2.125rem',
+        '11.25': '2.8125rem',
       }
     },
   },

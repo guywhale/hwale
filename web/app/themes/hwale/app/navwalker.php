@@ -18,7 +18,7 @@ class MainNavWalker extends \Walker_Nav_Menu
             $numberColour = 'text-red';
         }
 
-        $output .= "<li id='menu-item-" . $item->ID . "' class='" .  implode(" ", $item->classes) . "'>";
+        $output .= "<li id='menu-item-" . $item->ID . "' class='" .  implode(" ", $item->classes) . " py-3.75 px-0 lg:py-0 lg:px-6 2xl:px-11.25'>";
         $output .= '<a href="' . $item->url . '" class="relative flex flex-wrap items-center overflow-hidden group"' . $currentAria . '>';
         $output .= '<span class="nav-number-sm lg:text-nav-number-lg xl:text-nav-number basis-full max-w-full mb-0.5 '
                     . $numberColour . '"> 0' . $item->menu_order . '</span>';
