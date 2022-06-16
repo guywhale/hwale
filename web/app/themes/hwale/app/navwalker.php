@@ -21,7 +21,7 @@ class MainNavWalker extends \Walker_Nav_Menu
             $numberColour = 'text-red';
         }
 
-        $output.= "<li id=\"menu-item-{$item->ID}\" class=\"{$itemClasses}\">";
+        $output .= "<li id=\"menu-item-{$item->ID}\" class=\"{$itemClasses}\">";
         $output .= "<a href=\"{$item->url}\" class=\"{$linkClasses}\" {$currentAria}>";
         $output .= "<span class=\"{$numberClasses} {$numberColour}\">0{$item->menu_order}</span>";
         $output .= "<span class=\"{$lineClasses} {$interactClasses}\"></span>";
