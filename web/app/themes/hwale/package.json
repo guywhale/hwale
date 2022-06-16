@@ -16,7 +16,11 @@
   },
   "devDependencies": {
     "@roots/bud": "5.7.2",
+    "@roots/bud-eslint": "^6.0.0",
+    "@roots/bud-prettier": "^6.0.0",
+    "@roots/bud-stylelint": "^6.0.0",
     "@roots/bud-tailwindcss": "5.7.2",
+    "@roots/eslint-config": "^6.0.0",
     "@roots/sage": "5.7.2"
   }
 }
