@@ -17,7 +17,11 @@ return [
     */
 
     'defaults' => [
-        'trueFalse' => ['ui' => 1],
+        'group' => ['layout' => 'table'],
+        'postObject' => ['ui' => 1, 'return_format' => 'object'],
+        'repeater' => ['layout' => 'block'],
         'select' => ['ui' => 1],
+        'tab' => ['placement' => 'left'],
+        'trueFalse' => ['ui' => 1],
     ],
 ];
