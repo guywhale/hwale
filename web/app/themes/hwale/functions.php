@@ -54,7 +54,7 @@ try {
 |
 */
 
-collect(['setup', 'filters', 'navwalker'])
+collect(['setup', 'filters', 'navwalker', 'menuorder'])
     ->each(function ($file) {
         if (! locate_template($file = "app/{$file}.php", true, true)) {
             wp_die(
