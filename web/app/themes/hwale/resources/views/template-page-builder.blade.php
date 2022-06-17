@@ -7,6 +7,6 @@
 @section('content')
   @while(have_posts()) @php(the_post())
     <x-floating-title />
-    {{-- @include('partials.content-page') --}}
+    @include('partials.content-page')
   @endwhile
 @endsection
