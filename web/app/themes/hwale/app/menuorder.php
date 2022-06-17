@@ -1,4 +1,5 @@
 <?php
+
 namespace App;
 
 add_action('init', 'App\addMenuOrder');
