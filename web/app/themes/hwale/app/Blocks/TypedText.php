@@ -125,7 +125,7 @@ class TypedText extends Block
     public $example = [
         'textLine1' => 'Lorem Ipsum',
         'textLine2' => 'Vivamus magna justo',
-
+        // 'button' => ['Vivamus magna justo'],
     ];
 
     /**
@@ -138,6 +138,7 @@ class TypedText extends Block
         return [
             'textLine1' => $this->textLine1(),
             'textLine2' => $this->textLine2(),
+            'button' => $this->button(),
         ];
     }
 
@@ -156,7 +157,8 @@ class TypedText extends Block
             ])
             ->addText('text_line_2', [
                 'instructions' => 'Last 40 characters will be animated.',
-            ]);
+            ])
+            ->addLink('button');
 
         return $typedText->build();
     }
@@ -179,6 +181,17 @@ class TypedText extends Block
     public function textLine2()
     {
         return get_field('text_line_2') ?: $this->example['textLine2'];
+    }
+
+    /**
+     * Return the button field.
+     *
+     * @return array
+     */
+    public function button()
+    {
+        // return get_field('button') ?: $this->example['button'];
+        return get_field('button');
     }
 
 

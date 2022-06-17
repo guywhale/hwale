@@ -12,6 +12,9 @@
     @else
       <p>{{ $block->preview ? 'Add some text...' : 'No text found!' }}</p>
     @endif
+    @if ($textLine1)
+      <x-button type='link' :url="$button['url']" classes="mt-14" :target="$button['target']" :label="$button['title']"/>
+    @endif
   </div>
   <div>
     <InnerBlocks />
