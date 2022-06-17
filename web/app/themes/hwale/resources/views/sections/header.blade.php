@@ -1,4 +1,4 @@
-<header class="relative lg:static"
+<header class="fixed top-0 left-0 w-full"
   x-data="{ open: false }"
 >
   <div class="container flex items-center justify-between pt-6">
