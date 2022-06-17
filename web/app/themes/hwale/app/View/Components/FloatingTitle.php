@@ -19,7 +19,12 @@ class FloatingTitle extends Component
         global $post;
 
         $this->pageTitle = get_the_title();
-        $this->pageNumber = $post->menu_order;
+
+        if ($post->menu_order < 10) {
+            $this->pageNumber = "0{$post->menu_order}";
+        } else {
+            $this->pageNumber = $post->menu_order;
+        }
     }
 
     /**
