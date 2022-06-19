@@ -1,9 +1,9 @@
-<section class="{{ $block->classes }} relative overflow-hidden h-full lg:pt-1/3-screen">
+<section class="{{ $block->classes }} relative overflow-hidden h-full pt-1/3-screen">
   <x-text-explosion />
   <div class="container">
     @if ($textLine1)
       <h2 id="homeText1"
-        class="opacity-0 h-21"
+        class="opacity-0 h-10 mb-2 md:h-15.75 lg:h-21"
         data-text="{{ $textLine1 }}"
       >
         {{-- Keep hidden for SEO --}}
@@ -15,7 +15,7 @@
     @endif
     @if ($textLine2)
       <h2 id="homeText2"
-        class="opacity-0 h-21"
+        class="opacity-0 h-10 md:h-15.75 lg:h-21"
         data-text="{{ $textLine2 }}"
       >
         {{-- Keep hidden for SEO --}}

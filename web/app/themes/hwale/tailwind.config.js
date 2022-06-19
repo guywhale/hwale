@@ -43,6 +43,7 @@ module.exports = {
         center: true,
         padding: {
           DEFAULT: '0.9375rem',
+          md:'1.875rem',
           lg: '3.75rem',
         }
       },
@@ -166,6 +167,7 @@ module.exports = {
         '11.25': '2.8125rem',
         '15': '3.75rem',
         '15.5': '3.875rem',
+        '15.75': '3.9375rem',
         '21': '5.25rem',
         '21.5': '5.375rem',
         '32.5': '8.125rem',
