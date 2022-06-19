@@ -32,14 +32,4 @@
   svg #scope {
     @apply transition-all;
   }
-
-  /* [data-exploding-code] {
-    contain: style;
-    will-change: contents;
-  }
-
-  .letter {
-    contain: style;
-    will-change: transform;
-  } */
 }

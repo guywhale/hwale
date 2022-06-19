@@ -152,12 +152,8 @@ class TypedText extends Block
         $typedText = new FieldsBuilder('typed_text');
 
         $typedText
-            ->addText('text_line_1', [
-                'instructions' => 'First line of text won\'t be animated.',
-            ])
-            ->addText('text_line_2', [
-                'instructions' => 'Last 40 characters will be animated.',
-            ])
+            ->addText('text_line_1')
+            ->addText('text_line_2')
             ->addLink('button');
 
         return $typedText->build();

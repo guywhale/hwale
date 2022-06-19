@@ -144,6 +144,9 @@ module.exports = {
         '7.5': '1.875rem',
         'code-wrapper': '398px',
       },
+      minHeight: {
+        '11': '2.75rem',
+      },
       minWidth: {
         '35.5': '8.875rem',
       },

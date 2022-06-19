@@ -138,7 +138,7 @@ const ExplodingCode = (codeWrapper) => {
           const span = document.createElement('span');
 
           span.id = `word-${j + 1}`;
-          span.classList.add('word');
+          span.classList.add('word', 'will-change-transform');
           span.classList.add(words.color);
           span.setAttribute('data-text', words.text);
           p.appendChild(span);
