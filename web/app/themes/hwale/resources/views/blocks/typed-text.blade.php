@@ -2,13 +2,25 @@
   <x-text-explosion />
   <div class="container">
     @if ($textLine1)
-      <h2 class="opacity-0">{{ $textLine1 }}</h2>
+      <h2 id="homeText1"
+        class="opacity-0 h-21"
+        data-text="{{ $textLine1 }}"
+      >
+        {{-- Keep hidden for SEO --}}
+        <span class="absolute -top-[9999px] -left-[9999px]">{{ $textLine1 }}</span>
+        <span class="typed-text"></span>
+      </h2>
     @else
       <p>{{ $block->preview ? 'Add some text...' : 'No text found!' }}</p>
     @endif
     @if ($textLine2)
-      <h2 class="opacity-0">
-        <span>{{ $textLine2 }}</span><span class="typed-text"></span>
+      <h2 id="homeText2"
+        class="opacity-0 h-21"
+        data-text="{{ $textLine2 }}"
+      >
+        {{-- Keep hidden for SEO --}}
+        <span class="absolute -top-[9999px] -left-[9999px]">{{ $textLine2 }}</span>
+        <span class="typed-text"></span>
       </h2>
     @else
       <p>{{ $block->preview ? 'Add some text...' : 'No text found!' }}</p>

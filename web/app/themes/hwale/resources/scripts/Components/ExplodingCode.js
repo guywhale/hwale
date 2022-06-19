@@ -100,9 +100,14 @@ const ExplodingCode = (codeWrapper) => {
   ]
 
   typeOpeningFunction();
-  setTimeout(bringInHeaderTextBtn, 6000) // 6000
+  setTimeout(bringInHeaderTextBtn, 6000); // 6000
   setTimeout(wrapLettersAndExplode, 7500); // 7500
   setTimeout(floatingLetters, 9000); // 9000
+  setTimeout(addCursorAndType.bind(null, '#homeText1', '#homeText1 .typed-text'), 9000);
+  setTimeout(() => {
+    document.querySelector('#homeText1 .animate-blinking-cursor').remove();
+    addCursorAndType('#homeText2', '#homeText2 .typed-text');
+  }, 10500);
 
   function typeOpeningFunction() {
     // Creates paras
@@ -171,7 +176,7 @@ const ExplodingCode = (codeWrapper) => {
         { opacity: 1 }
       ],
       easing: 'easeInOutQuad' // easeInOutQuad
-    }, 0)
+    }, 300)
     .add({ // Bring in <h2>s
       targets: 'h2',
       keyframes: [
@@ -179,15 +184,7 @@ const ExplodingCode = (codeWrapper) => {
         { opacity: 1 }
       ],
       easing: 'easeInQuad' // easeInQuad
-    }, 300)
-    .add({ // Bring in button
-        targets: '.button',
-        keyframes: [
-          { opacity: 0 },
-          { opacity: 1 }
-        ],
-        easing: 'easeInQuad' // cubicBezier(.5, .05, .1, .3)
-    }, 300)
+    }, 600)
     .add({ // Bring in .main-title
         targets: 'h1',
         keyframes: [
@@ -195,7 +192,15 @@ const ExplodingCode = (codeWrapper) => {
           { opacity: .1 }
         ],
         easing: 'easeInQuad' // easeInQuad
-    }, 600)
+    }, 1200)
+    .add({ // Bring in button
+      targets: '.button',
+      keyframes: [
+        { opacity: 0 },
+        { opacity: 1 }
+      ],
+      easing: 'easeInQuad' // cubicBezier(.5, .05, .1, .3)
+    }, 4500)
   }
 
   function wrapLettersAndExplode() {
@@ -275,6 +280,17 @@ const ExplodingCode = (codeWrapper) => {
       duration: 20000,
       easing: 'linear',
     })
+  }
+
+  function addCursorAndType(textElement, targetSpan) {
+    const textEl = document.querySelector(textElement);
+    const textToType = textEl.getAttribute('data-text');
+    const blinkingCursor = document.createElement('span');
+    blinkingCursor.innerText = '_';
+    blinkingCursor.classList.add('animate-blinking-cursor');
+    textEl.appendChild(blinkingCursor);
+    const typeText = new TypeIt(textToType, targetSpan, 40); // 40
+    typeText.run();
   }
 }
 
