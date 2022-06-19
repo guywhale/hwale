@@ -1,5 +1,6 @@
 import {domReady} from '@roots/sage/client';
 import Alpine from 'alpinejs';
+// import ExplodingCode from './Components/ExplodingCode';
 
 
 /**
@@ -15,6 +16,18 @@ const main = async (err) => {
   window.Alpine = Alpine;
 
   Alpine.start();
+
+  if (document.querySelector('[data-exploding-code]')) {
+    const explodingCodes = document.querySelectorAll('[data-exploding-code]');
+
+    await import('./Components/ExplodingCode')
+      .then((exports) => {
+        [...explodingCodes].map(el => exports.default(el));
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
 
 };
 

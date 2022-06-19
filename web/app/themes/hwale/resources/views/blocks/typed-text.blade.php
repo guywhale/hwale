@@ -1,4 +1,5 @@
-<section class="{{ $block->classes }} lg:pt-1/3-screen">
+<section class="{{ $block->classes }} relative h-full lg:pt-1/3-screen">
+  <x-text-explosion />
   <div class="container">
     @if ($textLine1)
       <h2>{{ $textLine1 }}</h2>
