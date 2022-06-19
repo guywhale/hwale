@@ -1,6 +1,6 @@
 import {domReady} from '@roots/sage/client';
 import Alpine from 'alpinejs';
-// import ExplodingCode from './Components/ExplodingCode';
+import Swup from 'swup';
 
 
 /**
@@ -13,6 +13,11 @@ const main = async (err) => {
   }
 
   // application code
+
+  // const swup = new Swup({
+  //   animationSelector: '[class*="swup-transition-"]'
+  // });
+
   window.Alpine = Alpine;
 
   Alpine.start();

@@ -2,11 +2,13 @@
   {{ __('Skip to content') }}
 </a>
 
-@include('sections.header')
 
-  <main id="main" class="h-screen main">
+<div id="swup">
+  @include('sections.header')
+  <main id="main" class="h-screen main swup-transition-fade">
     @yield('content')
   </main>
+</div>
 
   @hasSection('sidebar')
     <aside class="sidebar">
