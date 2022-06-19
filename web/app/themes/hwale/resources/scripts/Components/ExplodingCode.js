@@ -287,7 +287,7 @@ const ExplodingCode = (codeWrapper) => {
     const textToType = textEl.getAttribute('data-text');
     const blinkingCursor = document.createElement('span');
     blinkingCursor.innerText = '_';
-    blinkingCursor.classList.add('animate-blinking-cursor');
+    blinkingCursor.classList.add('animate-blinking-cursor', 'text-red');
     textEl.appendChild(blinkingCursor);
     const typeText = new TypeIt(textToType, targetSpan, 40); // 40
     typeText.run();
