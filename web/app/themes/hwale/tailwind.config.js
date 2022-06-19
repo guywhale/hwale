@@ -41,7 +41,10 @@ module.exports = {
       },
       container: {
         center: true,
-        padding: '0.9375rem',
+        padding: {
+          DEFAULT: '0.9375rem',
+          lg: '3.75rem',
+        }
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
