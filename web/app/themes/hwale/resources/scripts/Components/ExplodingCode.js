@@ -1,24 +1,8 @@
-const ExplodingCode = (codeWrapper) => {
-  // Typing animation
-  class TypeIt {
-    constructor(text, container, speed) {
-      this.text = text;
-      this.container = container;
-      this.speed = speed;
-      this.current = 0;
-    }
+import { TypeIt } from "../Classes/TypeIt";
+import anime from 'animejs/lib/anime.es.js';
 
-    run() {
-      const cont = document.querySelector(this.container);
-      cont.append(this.text[this.current]);
-      this.current++;
-      if (this.current < this.text.length) {
-          window.setTimeout( () => {
-              this.run();
-          }, this.speed);
-      }
-    }
-  }
+const ExplodingCode = (codeWrapper) => {
+
   // Contains all info on text that needs to be created
   const lines = [
     { //line-1 => function makeWebsite(design, developer) {
@@ -116,6 +100,9 @@ const ExplodingCode = (codeWrapper) => {
   ]
 
   typeOpeningFunction();
+  setTimeout(bringInHeaderTextBtn, 6000) // 6000
+  setTimeout(wrapLettersAndExplode, 7500); // 7500
+  setTimeout(floatingLetters, 9000); // 9000
 
   function typeOpeningFunction() {
     // Creates paras
@@ -167,6 +154,127 @@ const ExplodingCode = (codeWrapper) => {
           typeText.run();
       }, i * 150)// 150
     }
+  }
+
+  function bringInHeaderTextBtn() {
+    const tl = anime.timeline({
+        loop: 1, // 1
+        direction : 'normal', // normal
+        duration: 3000, // 3000
+    });
+
+    tl
+    .add({ // Bring in <header>
+      targets: 'header',
+      keyframes: [
+        { opacity: 0 },
+        { opacity: 1 }
+      ],
+      easing: 'easeInOutQuad' // easeInOutQuad
+    }, 0)
+    .add({ // Bring in <h2>s
+      targets: 'h2',
+      keyframes: [
+        { opacity: 0 },
+        { opacity: 1 }
+      ],
+      easing: 'easeInQuad' // easeInQuad
+    }, 300)
+    .add({ // Bring in button
+        targets: '.button',
+        keyframes: [
+          { opacity: 0 },
+          { opacity: 1 }
+        ],
+        easing: 'easeInQuad' // cubicBezier(.5, .05, .1, .3)
+    }, 300)
+    .add({ // Bring in .main-title
+        targets: 'h1',
+        keyframes: [
+          { opacity: 0 },
+          { opacity: .1 }
+        ],
+        easing: 'easeInQuad' // easeInQuad
+    }, 600)
+  }
+
+  function wrapLettersAndExplode() {
+    // Unpack letters and remove line and word wrappers to allow for animation
+    const lineParas = document.querySelectorAll('.line');
+    const wordSpans = document.querySelectorAll('.line .word');
+
+    wordSpans.forEach(wordSpan => {
+      const textNodes = Array.from(wordSpan.childNodes).filter(node => node.nodeType === 3);
+      const colorClass = wordSpan.classList[1];
+
+      for (let i = 0; i < textNodes.length; i++) {
+        const node = textNodes[i];
+        const letterDiv = document.createElement('span');
+
+        letterDiv.id = `letter-${i}`;
+        letterDiv.classList.add('letter', 'inline-block');
+        letterDiv.classList.add(colorClass);
+        node.after(letterDiv);
+        letterDiv.appendChild(node);
+      }
+
+      wordSpan.replaceWith(...wordSpan.childNodes);
+    });
+
+    lineParas.forEach(linePara => {
+      linePara.replaceWith(...linePara.childNodes);
+    });
+
+    explodingLetters();
+    codeWrapper.classList.add('opacity-50');
+    codeWrapper.classList.remove('opacity-100');
+  }
+
+  function explodingLetters() {
+    const viewportWidth = document.documentElement.clientWidth;
+    const letterTransXMin = -viewportWidth / 2;
+    const letterTransXMax = viewportWidth / 2;
+
+    const viewportHeight = document.documentElement.clientHeight;
+    const letterTransYMin = (-viewportHeight / 2);
+    const letterTransYMax = (viewportHeight / 2);
+
+    /* Exploding letters */
+    anime({
+      targets: '.letter',
+      translateX: () => {
+        return anime.random(letterTransXMin, letterTransXMax);
+      },
+      translateY: () => {
+        return anime.random(letterTransYMin, letterTransYMax);
+      },
+      rotate: () => {
+        return anime.random(-360, 360);
+      },
+      scale: () => {
+        return `${anime.random(80, 120)}%`;
+      },
+      duration: 2500
+    })
+  }
+
+  function floatingLetters() {
+    anime({
+      targets: '.letter',
+      translateX: () => {
+          return `+=${anime.random(-100, 100)}px`;
+      },
+      translateY: () => {
+          return `+=${anime.random(-100, 100)}px`;
+      },
+      rotate: () => {
+          return `+=${anime.random(-100, 100)}`;
+      },
+      loop: true,
+      direction: 'alternate',
+      duration: 20000,
+      easing: 'linear',
+    })
   }
 }
 
