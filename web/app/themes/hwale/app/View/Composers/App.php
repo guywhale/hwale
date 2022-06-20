@@ -40,6 +40,10 @@ class App extends Composer
 
     /**
      * Check for cookie to run exploding letters animation.
+     * Creates it if it doesn't exist.
+     * Cookie status is always set to true when not on front
+     * page, as we don't want animation timings applied to
+     * the header and floating title on other pages.
      *
      * @return boolean
      */
