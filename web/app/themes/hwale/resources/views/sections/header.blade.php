@@ -1,4 +1,5 @@
-<header class="fixed top-0 left-0 z-20 w-full"
+<header class="fixed top-0 left-0 z-20 w-full
+  {{ $cookieStatus ? '' : 'opacity-0 animate-fade-in animate-delay-8s' }}"
   x-data="{ open: false }"
 >
   <div class="container flex items-center justify-between pt-6">

@@ -5,6 +5,7 @@ module.exports = {
       animation:{
         'blinking-cursor': 'blinkingCursor .75s ease-in infinite alternate',
         'draw-vertical-line': 'drawVerticalLine 1s ease-in-out forwards',
+        'fade-in': 'blinkingCursor 1s ease-in-out forwards',
         'flicker': 'flicker 0.15s infinite',
         'floating-ripple': 'floatingRipple 5s ease-in-out 2s infinite alternate',
         'picture-in': 'pictureIn 2s ease-in-out forwards',

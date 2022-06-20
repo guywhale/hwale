@@ -139,7 +139,6 @@ class TypedText extends Block
             'textLine1' => $this->textLine1(),
             'textLine2' => $this->textLine2(),
             'button' => $this->button(),
-            'cookieStatus' => $this->cookieStatus(),
         ];
     }
 
@@ -190,23 +189,6 @@ class TypedText extends Block
         // return get_field('button') ?: $this->example['button'];
         return get_field('button');
     }
-
-    /**
-     * Check for cookie to run exploding letters animation.
-     *
-     * @return boolean
-     */
-    public function cookieStatus()
-    {
-        $cookieStatus = false;
-
-        if (isset($_COOKIE['ShowExplodingLetters'])) {
-            $cookieStatus = true;
-        }
-
-        return $cookieStatus;
-    }
-
 
     /**
      * Assets to be enqueued when rendering the block.

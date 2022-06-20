@@ -24,6 +24,7 @@ class App extends Composer
     {
         return [
             'siteName' => $this->siteName(),
+            'cookieStatus' => $this->cookieStatus(),
         ];
     }
 
@@ -35,5 +36,21 @@ class App extends Composer
     public function siteName()
     {
         return get_bloginfo('name', 'display');
+    }
+
+    /**
+     * Check for cookie to run exploding letters animation.
+     *
+     * @return boolean
+     */
+    public function cookieStatus()
+    {
+        $cookieStatus = false;
+
+        if (isset($_COOKIE['ShowExplodingLetters']) || !is_front_page()) {
+            $cookieStatus = true;
+        }
+
+        return $cookieStatus;
     }
 }

@@ -27,7 +27,12 @@
       <p>{{ $block->preview ? 'Add some text...' : 'No text found!' }}</p>
     @endif
     @if ($button)
-      <x-button type="link" :url="$button['url']" classes="mt-14 animate-slide-in-left" :target="$button['target']" :label="$button['title']"/>
+      <x-button type="link"
+        :url="$button['url']"
+        classes="mt-14 opacity-0 animate-slide-in-left {{ $cookieStatus ? '' : 'animate-delay-10s' }}"
+        :target="$button['target']"
+        :label="$button['title']"
+      />
     @endif
   </div>
   <div>
