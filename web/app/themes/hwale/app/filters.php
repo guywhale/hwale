@@ -36,5 +36,4 @@ add_action('init', function () {
             'samesite' => 'Lax',
         ]);
     }
-
 });
