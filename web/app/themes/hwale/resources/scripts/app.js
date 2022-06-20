@@ -15,7 +15,8 @@ const main = async (err) => {
   // application code
 
   // const swup = new Swup({
-  //   animationSelector: '[class*="swup-transition-"]'
+  //   animationSelector: '[class*="swup-transition-"]',
+  //   cache: false
   // });
 
   window.Alpine = Alpine;
