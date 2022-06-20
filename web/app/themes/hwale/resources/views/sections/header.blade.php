@@ -1,4 +1,4 @@
-<header class="fixed top-0 left-0 z-20 w-full {{ is_front_page() ? 'opacity-0' : ''}}"
+<header class="fixed top-0 left-0 z-20 w-full"
   x-data="{ open: false }"
 >
   <div class="container flex items-center justify-between pt-6">

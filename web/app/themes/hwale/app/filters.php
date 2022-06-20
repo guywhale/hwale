@@ -23,3 +23,18 @@ add_filter('excerpt_more', function () {
 add_action('init', function () {
     add_post_type_support('page', 'page-attributes');
 });
+
+/**
+ * Check for cookie to run exploding letters animation.
+ * Create if not found.
+ * @return void
+ **/
+add_action('init', function () {
+    if (!isset($_COOKIE['ShowExplodingLetters'])) {
+        setcookie('ShowExplodingLetters', 'true', [
+            'path' => '/',
+            'samesite' => 'Lax',
+        ]);
+    }
+
+});

@@ -100,7 +100,7 @@ const ExplodingCode = (codeWrapper) => {
   ]
 
   typeOpeningFunction();
-  setTimeout(bringInHeaderTextBtn, 6000); // 6000
+  // setTimeout(bringInHeaderTextBtn, 6000); // 6000
   setTimeout(wrapLettersAndExplode, 7500); // 7500
   setTimeout(floatingLetters, 9000); // 9000
   setTimeout(addCursorAndType.bind(null, '#homeText1', '#homeText1 .typed-text'), 9000);
