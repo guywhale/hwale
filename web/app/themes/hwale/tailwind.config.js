@@ -6,6 +6,10 @@ module.exports = {
         'blinking-cursor': 'blinkingCursor .75s ease-in infinite alternate',
         'draw-vertical-line': 'drawVerticalLine 1s ease-in-out forwards',
         'flicker': 'flicker 0.15s infinite',
+        'floating-ripple': 'floatingRipple 5s ease-in-out 2s infinite alternate',
+        'picture-in': 'pictureIn 2s ease-in-out forwards',
+        'rotate-3d-x': 'rotate3dX 2s ease-in-out forwards',
+        'slide-in-left': 'slideInLeft 1.5s ease-in-out forwards',
         'text-shadow': 'textShadow 1.6s infinite',
       },
       backgroundImage: {
@@ -74,8 +78,16 @@ module.exports = {
           lineHeight: '6.25rem',
           letterSpacing: '.075em',
         }],
+        'h1-md': ['7.5rem', {
+          lineHeight: '6.25rem',
+          letterSpacing: '.075em',
+        }],
         'h1-number': ['4.3125rem', {
           lineHeight: '6.5625rem',
+          letterSpacing: '.075em',
+        }],
+        'h1-number-md': ['1.875rem', {
+          lineHeight: '1.875rem',
           letterSpacing: '.075em',
         }],
         'h2': ['3.75rem', '5.625rem'],
@@ -124,6 +136,28 @@ module.exports = {
           '95%':{ opacity: '0.36108' },
           '100%':{ opacity: '0.24387' },
         },
+        floatingRipple: {
+          '0%': { transform: 'perspective(1500px) rotateY(15deg)' },
+          '100%': { transform: 'perspective(3000px) rotateY(5deg)' }
+        },
+        pictureIn: {
+          '0%': {
+            filter: 'blur(8px)',
+            opacity: '0',
+          },
+          '100%': {
+            filter: 'blur(0)',
+            opacity: '0.4',
+          },
+        },
+        rotate3dX: {
+          '0%': { transform: 'rotate3d(0, 1, 0, 90deg) rotate(0deg)', opacity: '0' },
+          '100%': { transform: 'rotate3d(0, 0, 0, 0deg) rotate(0deg)', opacity: '0.1' },
+        },
+        slideInLeft: {
+          '0%': { transform: 'translateX(-200px)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' }
+        },
         textShadow: {
           '0%':{ textShadow: '0.4389924193300864px 0 1px rgba(0,30,255,0.5), -0.4389924193300864px 0 1px rgba(255,0,80,0.3), 0 0 3px' },
           '5%':{ textShadow: '2.7928974010788217px 0 1px rgba(0,30,255,0.5), -2.7928974010788217px 0 1px rgba(255,0,80,0.3), 0 0 3px' },
@@ -161,6 +195,7 @@ module.exports = {
         '35.5': '8.875rem',
       },
       spacing: {
+        'unset': 'unset',
         '1/3': '33.3333%',
         '1/3-screen': '33.3333vh',
         '0.75': '0.1875rem',
@@ -180,6 +215,7 @@ module.exports = {
         '25': '6.25rem',
         '32.5': '8.125rem',
         '45': '11.25rem',
+        '47.5': '11.875rem',
       }
     },
   },

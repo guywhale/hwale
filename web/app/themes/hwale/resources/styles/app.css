@@ -8,7 +8,7 @@
   }
 
   h1 {
-    @apply font-thin uppercase text-h1;
+    @apply font-thin uppercase text-h1-md lg:text-h1;
   }
 
   h2 {
@@ -49,5 +49,9 @@
 
   .cms p {
     @apply mb-6;
+  }
+
+  .animate-delay-300 {
+    animation-delay: 300ms;
   }
 }

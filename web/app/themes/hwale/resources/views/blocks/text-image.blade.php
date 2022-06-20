@@ -1,18 +1,18 @@
-<section class="{{ $block->classes }} h-full pt-25 lg:pt-48">
+<section class="{{ $block->classes }} h-full pt-25 lg:pt-32">
   <div class="container">
     <div class="flex flex-col lg:flex-row">
-        <div class="order-2 lg:w-1/2 lg:order-1">
+        <div class="order-2 pt-16 lg:pt-0 xl:pt-10 2xl:pt-24 lg:w-2/3 xl:w-1/2 lg:order-1">
           @if ($text)
-            <div class="cms">
+            <div class="cms animate-slide-in-left">
               {!! $text !!}
             </div>
           @endif
           @if ($button)
-            <x-button type="link" :url="$button['url']" classes="mt-10" :target="$button['target']" :label="$button['title']" />
+            <x-button type="link" :url="$button['url']" classes="mt-10 opacity-0 animate-slide-in-left animate-delay-300" :target="$button['target']" :label="$button['title']" />
           @endif
         </div>
         @if ($image)
-          <picture class="order-1 mb-7.5 lg:order-2 lg:mb-0 lg:w-1/2">
+          <picture class="order-1 opacity-0 animate-picture-in lg:order-2 lg:w-1/3 xl:w-1/2 xl:pl-[8%]">
             <source media="(max-width: 1023px)"
               srcset="{{ $image['sizes']['medium'] }} {{ $image['sizes']['medium-width'] }}w"
               sizes="(max-width: 1023px) {{ $image['sizes']['medium-width'] }}"
