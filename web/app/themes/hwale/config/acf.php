@@ -23,5 +23,6 @@ return [
         'select' => ['ui' => 1],
         'tab' => ['placement' => 'left'],
         'trueFalse' => ['ui' => 1],
+        'wysiwyg' => ['media_upload' => 0, 'toolbar' => 'basic'],
     ],
 ];

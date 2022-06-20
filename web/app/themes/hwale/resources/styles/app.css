@@ -42,4 +42,12 @@
   html.is-animating .swup-transition-fade {
     @apply opacity-0;
   }
+
+  .cms strong {
+    @apply text-red;
+  }
+
+  .cms p {
+    @apply mb-6;
+  }
 }

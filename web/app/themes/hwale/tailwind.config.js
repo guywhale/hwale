@@ -151,6 +151,7 @@ module.exports = {
       maxWidth: {
         '2/3': '66.666%',
         '7.5': '1.875rem',
+        '300': '300px',
         'code-wrapper': '398px',
       },
       minHeight: {
@@ -176,6 +177,7 @@ module.exports = {
         '15.75': '3.9375rem',
         '21': '5.25rem',
         '21.5': '5.375rem',
+        '25': '6.25rem',
         '32.5': '8.125rem',
         '45': '11.25rem',
       }
