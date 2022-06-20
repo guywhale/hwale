@@ -3,7 +3,8 @@ module.exports = {
   theme: {
     extend: {
       animation:{
-        'blinking-cursor': 'blinkingCursor .75s ease-in infinite alternate;',
+        'blinking-cursor': 'blinkingCursor .75s ease-in infinite alternate',
+        'draw-vertical-line': 'drawVerticalLine 1s ease-in-out forwards',
         'flicker': 'flicker 0.15s infinite',
         'text-shadow': 'textShadow 1.6s infinite',
       },
@@ -96,6 +97,10 @@ module.exports = {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
+        drawVerticalLine: {
+          '0%': { maxHeight: '0%' },
+          '100%': { maxHeight: '100%' },
+        },
         flicker: {
           '0%':{ opacity: '0.27861' },
           '5%':{ opacity: '0.34769' },
@@ -155,6 +160,7 @@ module.exports = {
         '35.5': '8.875rem',
       },
       spacing: {
+        '1/3': '33.3333%',
         '1/3-screen': '33.3333vh',
         '0.75': '0.1875rem',
         '1.25': '0.3125rem',
