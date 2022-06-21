@@ -14,30 +14,36 @@ const main = async (err) => {
 
   // application code
 
-  // Initiate Swup
-  // const swup = new Swup({
-  //   animationSelector: '[class*="swup-transition-"]',
-  //   cache: false
-  // });
+  //Initiate Swup
+  const swup = new Swup({
+    animationSelector: '[class*="swup-transition-"]',
+  });
 
   // Initiate Alpine
   window.Alpine = Alpine;
 
   Alpine.start();
 
-  // Typed and exploding text
-  if (document.querySelector('[data-exploding-code]')) {
-    const explodingCodes = document.querySelectorAll('[data-exploding-code]');
+  // Initiate functions
+  init();
 
-    await import('./Components/ExplodingCode')
-      .then((exports) => {
-        [...explodingCodes].map(el => exports.default(el));
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+  // reload init functions after swup page transition
+  swup.on('contentReplaced', init);
+
+  function init() {
+    // Typed and exploding text
+    if (document.querySelector('[data-exploding-code]')) {
+      const explodingCodes = document.querySelectorAll('[data-exploding-code]');
+
+      import('./Components/ExplodingCode')
+        .then((exports) => {
+          [...explodingCodes].map(el => exports.default(el));
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
   }
-
 };
 
 /**
