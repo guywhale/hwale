@@ -54,7 +54,7 @@ const main = async (err) => {
       const scores = document.querySelectorAll('[data-score]');
       // console.log(scores);
 
-      import('./Components/CountUpScore.js')
+      import('./Components/CountUpScore')
         .then((exports) => {
           [...scores].map(el => exports.default(el));
         })
