@@ -101,7 +101,7 @@ const ExplodingCode = (codeWrapper) => {
   typeOpeningFunction();
 
   let explodeTimeout = 1
-  let floatTimeout = 800;
+  let floatTimeout = 300;
   let ht1Timeout = 1;
   let ht2Timeout = 1501;
 
@@ -229,7 +229,7 @@ const ExplodingCode = (codeWrapper) => {
     const viewportHeight = document.documentElement.clientHeight;
     const letterTransYMin = (-viewportHeight / 2);
     const letterTransYMax = (viewportHeight / 2);
-    let duration = 1;
+    let duration = 100;
 
     if (document.querySelector('[data-explode]')) {
       duration = 2500;
