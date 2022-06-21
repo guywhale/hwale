@@ -13,7 +13,7 @@
   @endif
   @if ($score)
     <p class="opacity-0 text-skill-score animate-fade-in animate-duration-2000">
-      {{ $score }}%
+      <span data-score="{{ $score }}"></span>%
     </p>
   @endif
   <div class="relative w-full h-0.75 basis-full mt-1">

@@ -14,7 +14,9 @@
       />
     @endif
       @if ($skills)
-      <div class="flex flex-wrap mt-20 -mx-3.5">
+      <div class="flex flex-wrap mt-20 -mx-3.5"
+        data-skills
+      >
         @foreach ($skills as $skill)
           <x-skill :skill="$skill['skill']" :score="$skill['score']" />
         @endforeach
