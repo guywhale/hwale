@@ -17,7 +17,7 @@
   <span class="w-10.75 md:w-15.5 lg:w-auto nav-number-sm md:text-nav-number-lg lg:text-nav-number lg:mb-0.5 transition-colors"
     :class="active ? 'text-red' : 'text-grey'"
   >
-    05
+    06
   </span>
   <label for="navSearch" class="text-nav-sm mb-2.5 md:mb-0 md:text-nav-lg lg:text-nav">Search</label>
   <input type="search"
