@@ -1,7 +1,7 @@
 import {domReady} from '@roots/sage/client';
 import Alpine from 'alpinejs';
 import Swup from 'swup';
-// import CountUpScore from './Components/CountUpScore';
+import CountUpScore from './Components/CountUp';
 
 
 /**
@@ -16,9 +16,10 @@ const main = async (err) => {
   // application code
 
   //Initiate Swup
-  // const swup = new Swup({
-  //   animationSelector: '[class*="swup-transition-"]',
-  // });
+  const swup = new Swup({
+    animationSelector: '[class*="swup-transition-"]',
+    cache: false,
+  });
 
   // Initiate Alpine
   window.Alpine = Alpine;
@@ -30,7 +31,7 @@ const main = async (err) => {
 
 
   // reload init functions after swup page transition
-  // swup.on('contentReplaced', init);
+  swup.on('contentReplaced', init);
 
   function init() {
     // Typed and exploding text
@@ -46,21 +47,13 @@ const main = async (err) => {
         });
     }
 
-    // CountUpScore();
-
-
     // Count up skill score animation
     if (document.querySelector('[data-score]')) {
       const scores = document.querySelectorAll('[data-score]');
-      // console.log(scores);
 
-      import('./Components/CountUpScore')
-        .then((exports) => {
-          [...scores].map(el => exports.default(el));
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+      scores.forEach(score => {
+        CountUpScore(score);
+      });
     }
   }
 };
