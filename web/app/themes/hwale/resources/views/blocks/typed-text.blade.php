@@ -1,4 +1,4 @@
-@dump($cookieStatus)
+{{-- @dump($cookieStatus) --}}
 <section class="{{ $block->classes }} relative overflow-hidden h-full pt-1/3-screen">
   <x-text-explosion />
   <div class="container">
@@ -29,7 +29,7 @@
     @if ($button)
       <x-button type="link"
         :url="$button['url']"
-        classes="mt-14 opacity-0 animate-slide-in-left {{ $cookieStatus ? '' : 'animate-delay-10s' }}"
+        classes="mt-14 {{ $cookieStatus ? 'animate-delay-300' : 'animate-delay-10s' }}"
         :target="$button['target']"
         :label="$button['title']"
       />

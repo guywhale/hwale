@@ -8,7 +8,12 @@
             </div>
           @endif
           @if ($button)
-            <x-button type="link" :url="$button['url']" classes="mt-10 opacity-0 animate-slide-in-left animate-delay-300" :target="$button['target']" :label="$button['title']" />
+            <x-button type="link"
+              :url="$button['url']"
+              classes="mt-10 animate-delay-300"
+              :target="$button['target']"
+              :label="$button['title']"
+            />
           @endif
         </div>
         @if ($image)
