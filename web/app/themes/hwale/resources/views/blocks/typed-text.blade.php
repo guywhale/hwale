@@ -1,5 +1,5 @@
 {{-- @dump($cookieStatus) --}}
-<section class="{{ $block->classes }} relative overflow-hidden h-full pt-1/3-screen">
+<section class="{{ $block->classes }} relative overflow-hidden h-screen pt-1/3-screen">
   <x-text-explosion />
   <div class="container">
     @if ($textLine1)

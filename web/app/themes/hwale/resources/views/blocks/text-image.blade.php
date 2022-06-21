@@ -26,7 +26,7 @@
               alt="{{ $image['alt'] }}"
               width="{{ $image['width'] }}"
               height="{{ $image['height'] }}"
-              class="mx-auto max-w-300 lg:max-w-full md:ml-auto md:mr-0"
+              class="ml-auto max-w-300 lg:max-w-full"
             >
           </picture>
         @endif

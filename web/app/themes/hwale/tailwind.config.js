@@ -83,6 +83,10 @@ module.exports = {
           lineHeight: '6.25rem',
           letterSpacing: '.075em',
         }],
+        'h1-sm': ['3.75rem', {
+          lineHeight: '3.75rem',
+          letterSpacing: '.075em',
+        }],
         'h1-number': ['4.3125rem', {
           lineHeight: '6.5625rem',
           letterSpacing: '.075em',
@@ -208,6 +212,7 @@ module.exports = {
         '8.75': '2.1875rem',
         '10.75': '2.6875rem',
         '11.25': '2.8125rem',
+        '14.5': '3.625rem',
         '15': '3.75rem',
         '15.5': '3.875rem',
         '15.75': '3.9375rem',

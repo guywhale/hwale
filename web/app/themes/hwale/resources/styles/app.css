@@ -8,7 +8,7 @@
   }
 
   h1 {
-    @apply font-thin uppercase text-h1-md lg:text-h1;
+    @apply font-thin uppercase text-h1-sm md:text-h1-md lg:text-h1;
   }
 
   h2 {
