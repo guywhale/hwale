@@ -1,4 +1,3 @@
-{{-- @dump($cookieStatus) --}}
 <section class="{{ $block->classes }} relative overflow-hidden h-screen pt-1/3-screen">
   <x-text-explosion />
   <div class="container">
