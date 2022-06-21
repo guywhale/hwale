@@ -108,6 +108,10 @@ module.exports = {
         'nav-search': ['0.875rem', '1.5rem'],
         'nav-search-lg': ['2.1875rem', '3.75rem'],
         'nav-search-sm': ['1.625rem', '1.875rem'],
+        'skill-score': ['1.125rem', {
+          lineHeight: '1.6875',
+          letterSpacing: '0.2em',
+        }]
       },
       keyframes: {
         blinkingCursor: {
@@ -220,6 +224,7 @@ module.exports = {
         '21.5': '5.375rem',
         '25': '6.25rem',
         '32.5': '8.125rem',
+        '37.5': '9.375rem',
         '45': '11.25rem',
         '47.5': '11.875rem',
       }
