@@ -14,15 +14,18 @@ const main = async (err) => {
 
   // application code
 
+  // Initiate Swup
   // const swup = new Swup({
   //   animationSelector: '[class*="swup-transition-"]',
   //   cache: false
   // });
 
+  // Initiate Alpine
   window.Alpine = Alpine;
 
   Alpine.start();
 
+  // Typed and exploding text
   if (document.querySelector('[data-exploding-code]')) {
     const explodingCodes = document.querySelectorAll('[data-exploding-code]');
 

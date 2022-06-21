@@ -2,7 +2,6 @@ import { TypeIt } from "../Classes/TypeIt";
 import anime from 'animejs/lib/anime.es.js';
 
 const ExplodingCode = (codeWrapper) => {
-
   // Contains all info on text that needs to be created
   const lines = [
     { //line-1 => function makeWebsite(design, developer) {
@@ -100,13 +99,26 @@ const ExplodingCode = (codeWrapper) => {
   ]
 
   typeOpeningFunction();
-  setTimeout(wrapLettersAndExplode, 7500); // 7500
-  setTimeout(floatingLetters, 9000); // 9000
-  setTimeout(addCursorAndType.bind(null, '#homeText1', '#homeText1 .typed-text'), 9000);
+
+  let explodeTimeout = 1
+  let floatTimeout = 800;
+  let ht1Timeout = 1;
+  let ht2Timeout = 1501;
+
+  if (document.querySelector('[data-explode]')) {
+    explodeTimeout = 7500
+    floatTimeout = 9000;
+    ht1Timeout = 9000;
+    ht2Timeout = 10500;
+  }
+
+  setTimeout(wrapLettersAndExplode, explodeTimeout);
+  setTimeout(floatingLetters, floatTimeout);
+  setTimeout(addCursorAndType.bind(null, '#homeText1', '#homeText1 .typed-text'), ht1Timeout);
   setTimeout(() => {
     document.querySelector('#homeText1 .animate-blinking-cursor').remove();
     addCursorAndType('#homeText2', '#homeText2 .typed-text');
-  }, 10500);
+  }, ht2Timeout);
 
   function typeOpeningFunction() {
     // Creates paras
@@ -139,10 +151,19 @@ const ExplodingCode = (codeWrapper) => {
           span.id = `word-${j + 1}`;
           span.classList.add('word', 'will-change-transform');
           span.classList.add(words.color);
-          span.setAttribute('data-text', words.text);
+
+          if (document.querySelector('[data-explode]')) {
+            span.setAttribute('data-text', words.text);
+          } else {
+            [...words.text].forEach(letter => {
+              span.append(letter);
+            });
+          }
+
           p.appendChild(span);
       }
     }
+
 
     // Type words into empty spans
     const words = document.querySelectorAll('.word');
@@ -150,13 +171,16 @@ const ExplodingCode = (codeWrapper) => {
     for (let i = 0; i < words.length; i++) {
       const span = words[i];
       const spanParentId = span.parentElement.id;
-      const spanId = span.id
-      const text = span.getAttribute('data-text');
-      const typeText = new TypeIt(text, `#${spanParentId} #${spanId}`, 10);// 10
+      const spanId = span.id;
 
-      setTimeout(() => {
-          typeText.run();
-      }, i * 150)// 150
+      if (document.querySelector('[data-explode]')) {
+        const text = span.getAttribute('data-text');
+        const typeText = new TypeIt(text, `#${spanParentId} #${spanId}`, 10);// 10
+
+        setTimeout(() => {
+            typeText.run();
+        }, i * 150)// 150
+      }
     }
   }
 
@@ -167,14 +191,14 @@ const ExplodingCode = (codeWrapper) => {
 
     wordSpans.forEach(wordSpan => {
       const textNodes = Array.from(wordSpan.childNodes).filter(node => node.nodeType === 3);
-      const colorClass = wordSpan.classList[1];
+      const colorClass = wordSpan.classList[2];
 
       for (let i = 0; i < textNodes.length; i++) {
         const node = textNodes[i];
         const letterDiv = document.createElement('span');
 
         letterDiv.id = `letter-${i}`;
-        letterDiv.classList.add('letter', 'inline-block');
+        letterDiv.classList.add('letter', 'inline-block', 'will-change-transform');
         letterDiv.classList.add(colorClass);
         node.after(letterDiv);
         letterDiv.appendChild(node);
@@ -189,7 +213,12 @@ const ExplodingCode = (codeWrapper) => {
 
     explodingLetters();
     codeWrapper.classList.add('opacity-50');
-    codeWrapper.classList.remove('opacity-100');
+
+    if (document.querySelector('[data-explode]')) {
+      codeWrapper.classList.remove('opacity-100');
+    } else {
+      codeWrapper.classList.remove('opacity-0');
+    }
   }
 
   function explodingLetters() {
@@ -200,6 +229,12 @@ const ExplodingCode = (codeWrapper) => {
     const viewportHeight = document.documentElement.clientHeight;
     const letterTransYMin = (-viewportHeight / 2);
     const letterTransYMax = (viewportHeight / 2);
+    let duration = 1;
+
+    if (document.querySelector('[data-explode]')) {
+      duration = 2500;
+    }
+
 
     /* Exploding letters */
     anime({
@@ -216,7 +251,7 @@ const ExplodingCode = (codeWrapper) => {
       scale: () => {
         return `${anime.random(80, 120)}%`;
       },
-      duration: 2500
+      duration: duration
     })
   }
 

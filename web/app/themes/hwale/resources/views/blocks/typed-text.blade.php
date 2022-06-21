@@ -4,7 +4,7 @@
   <div class="container">
     @if ($textLine1)
       <h2 id="homeText1"
-        class="h-10 mb-2 md:h-15.75 lg:h-21 animate-slide-in-left"
+        class="h-10 mb-2 md:h-15.75 lg:h-21"
         data-text="{{ $textLine1 }}"
       >
         {{-- Keep hidden for SEO --}}
@@ -16,7 +16,7 @@
     @endif
     @if ($textLine2)
       <h2 id="homeText2"
-        class="h-10 md:h-15.75 lg:h-21 animate-slide-in-left"
+        class="h-10 md:h-15.75 lg:h-21"
         data-text="{{ $textLine2 }}"
       >
         {{-- Keep hidden for SEO --}}
@@ -29,7 +29,7 @@
     @if ($button)
       <x-button type="link"
         :url="$button['url']"
-        classes="mt-14 {{ $cookieStatus ? 'animate-delay-300' : 'animate-delay-10s' }}"
+        classes="mt-14 {{ $cookieStatus ? 'animate-delay-1500' : 'animate-delay-10s' }}"
         :target="$button['target']"
         :label="$button['title']"
       />
