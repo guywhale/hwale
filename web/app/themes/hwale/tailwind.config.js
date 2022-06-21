@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       animation:{
         'blinking-cursor': 'blinkingCursor .75s ease-in infinite alternate',
+        'draw-horizontal-line': 'drawHorizontalLine 1s ease-in-out forwards',
         'draw-vertical-line': 'drawVerticalLine 1s ease-in-out forwards',
         'fade-in': 'blinkingCursor 1s ease-in-out forwards',
         'flicker': 'flicker 0.15s infinite',
@@ -118,6 +119,10 @@ module.exports = {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
+        drawHorizontalLine: {
+          '0%': { maxWidth: '0%' },
+          '100%': { maxWidth: '100%' },
+        },
         drawVerticalLine: {
           '0%': { maxHeight: '0%' },
           '100%': { maxHeight: '100%' },
@@ -227,6 +232,9 @@ module.exports = {
         '37.5': '9.375rem',
         '45': '11.25rem',
         '47.5': '11.875rem',
+      },
+      transitionProperty: {
+        'max-width': 'max-width',
       }
     },
   },
