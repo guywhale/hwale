@@ -48,9 +48,9 @@ module.exports = {
       container: {
         center: true,
         padding: {
-          DEFAULT: '0.9375rem',
-          md:'1.875rem',
-          lg: '3.75rem',
+          DEFAULT: '15px',
+          md:'30px',
+          xl: '60px',
         }
       },
       fontFamily: {
