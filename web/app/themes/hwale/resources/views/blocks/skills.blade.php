@@ -1,7 +1,7 @@
-<section class="{{ $block->classes }} h-screen pt-37.5">
+<section class="{{ $block->classes }} min-h-screen 2xl:pt-37.5 2xl:pb-15">
   <div class="container">
     @if ($text)
-      <div class="w-1/2 cms animate-slide-in-left">
+      <div class="lg:w-1/2 cms animate-slide-in-left">
         {!! $text !!}
       </div>
     @endif
@@ -14,7 +14,7 @@
       />
     @endif
       @if ($skills)
-      <div class="flex flex-wrap mt-20 -mx-3.5">
+      <div class="flex flex-wrap mt-16 -mx-3.5">
         @foreach ($skills as $skill)
           <x-skill :skill="$skill['skill']" :score="$skill['score']" />
         @endforeach

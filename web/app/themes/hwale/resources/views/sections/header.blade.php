@@ -1,4 +1,4 @@
-<header class="fixed top-0 left-0 z-20 w-full p-6
+<header class="fixed top-0 left-0 z-20 w-full py-6
   {{ $cookieStatus ? '' : 'opacity-0 animate-fade-in animate-delay-8s' }}"
   x-data="{ open: false }"
 >

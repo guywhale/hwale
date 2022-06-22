@@ -1,4 +1,4 @@
-<div class="flex flex-wrap justify-between w-1/2 px-3.5 py-5"
+<div class="flex flex-wrap justify-between w-full lg:w-1/2 px-3.5 py-5"
   x-data="{
     setMaxWidth() {
       $refs.scoreLine.style.maxWidth = '{{ $score }}%'
