@@ -6,7 +6,7 @@
 <div id="swup">
   @include('sections.header')
   <main id="main"
-    class="main swup-transition-fade"
+    class="relative main swup-transition-fade"
     {{ $cookieStatus ? '' : 'data-explode' }}
   >
     @yield('content')
