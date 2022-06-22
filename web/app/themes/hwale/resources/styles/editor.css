@@ -3,7 +3,8 @@
 @import 'tailwindcss/utilities';
 
 @layer base {
-  body {
+  body,
+  .acf-block-preview {
     @apply font-normal text-white font-poppins text-body bg-black-light selection:bg-white selection:text-black-light;
   }
 
