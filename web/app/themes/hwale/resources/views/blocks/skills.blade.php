@@ -1,4 +1,4 @@
-<section class="{{ $block->classes }} min-h-screen 2xl:pt-37.5 2xl:pb-15">
+<section class="{{ $block->classes }} min-h-screen pt-65 pb-24 md:pt-80 lg:pt-37.5">
   <div class="container">
     @if ($text)
       <div class="lg:w-1/2 cms animate-slide-in-left">

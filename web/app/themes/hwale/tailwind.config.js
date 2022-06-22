@@ -232,6 +232,7 @@ module.exports = {
         '37.5': '9.375rem',
         '45': '11.25rem',
         '47.5': '11.875rem',
+        '65': '16.25rem',
       },
       transitionProperty: {
         'max-width': 'max-width',
