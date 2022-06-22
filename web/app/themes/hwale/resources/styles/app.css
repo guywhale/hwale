@@ -71,3 +71,16 @@
     animation-duration: 2000ms;
   }
 }
+
+.headroom--pinned,
+.headroom--top {
+  @apply pt-6 transition-all duration-500 translate-y-0 bg-transparent;
+}
+
+.headroom--not-top {
+  @apply py-2 bg-black-light;
+}
+
+.headroom--unpinned {
+  @apply pt-0 transition-all duration-300 -translate-y-full bg-black-light;
+}

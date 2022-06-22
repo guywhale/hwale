@@ -1,14 +1,14 @@
-<header class="fixed top-0 left-0 z-20 w-full
+<header class="fixed top-0 left-0 z-20 w-full p-6
   {{ $cookieStatus ? '' : 'opacity-0 animate-fade-in animate-delay-8s' }}"
   x-data="{ open: false }"
 >
-  <div class="container flex items-center justify-between pt-6">
+  <div class="container flex items-center justify-between">
     <a class="relative z-10 group" href="{{ home_url('/') }}">
       {!! get_svg('images.logo') !!}
     </a>
 
     @if (has_nav_menu('primary_navigation'))
-      <div class="absolute top-0 left-0 block w-screen h-screen transition-transform pt-28 lg:pt-0 bg-black-light lg:static lg:inline lg:w-auto lg:h-auto lg:bg-transparent lg:translate-x-0"
+      <div class="absolute top-0 left-0 block w-screen min-h-screen transition-transform pt-28 lg:pt-0 bg-black-light lg:static lg:inline lg:w-auto lg:min-h-0 lg:bg-transparent lg:translate-x-0"
         :class="open ? 'translate-x-0' : 'translate-x-full'"
       >
         <nav class="container flex flex-col lg:px-0 lg:mx-0 lg:flex-row"

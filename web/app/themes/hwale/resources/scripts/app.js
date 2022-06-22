@@ -1,6 +1,7 @@
 import {domReady} from '@roots/sage/client';
 import Alpine from 'alpinejs';
 import Swup from 'swup';
+import Headroom from "headroom.js";
 
 /**
  * app.main
@@ -30,6 +31,11 @@ const main = async (err) => {
   init();
 
   function init() {
+    // Headroom
+    const header = document.querySelector('header');
+    const headroom  = new Headroom(header, { offset: header.offsetHeight / 2 });
+    headroom.init();
+
     // Typed and exploding text
     if (document.querySelector('[data-exploding-code]')) {
       const explodingCodes = document.querySelectorAll('[data-exploding-code]');
