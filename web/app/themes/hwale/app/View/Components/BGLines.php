@@ -15,7 +15,24 @@ class BGLines extends Component
      */
     public function __construct()
     {
-        $this->showLines = is_front_page() ? false : true;
+        $pageHasLines = true;
+
+        switch ($pageHasLines) {
+            case is_front_page():
+                $pageHasLines = false;
+                break;
+            case get_the_title() === 'Work':
+                $pageHasLines = false;
+                break;
+            case is_search():
+                $pageHasLines = false;
+                break;
+            default:
+                $pageHasLines = true;
+                break;
+        }
+
+        $this->showLines = $pageHasLines;
     }
 
     /**
