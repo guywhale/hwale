@@ -1,7 +1,6 @@
 import anime from 'animejs/lib/anime.es.js';
 
 const CountUp = (el) => {
-  console.log('something');
     const scoreVal = el.getAttribute('data-score');
 
     anime({

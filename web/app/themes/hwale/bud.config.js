@@ -11,7 +11,10 @@ module.exports = async (app) => {
      * Paths are relative to your resources directory
      */
     .entry({
-      app: ['@scripts/app', '@styles/app'],
+      app: {
+        import: ['@scripts/app', '@styles/app'],
+        publicPath: '/app/themes/hwale/public/',
+      },
       editor: ['@scripts/editor', '@styles/editor'],
     })
 

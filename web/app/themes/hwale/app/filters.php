@@ -32,7 +32,9 @@ add_action('init', function () {
 add_action('init', function () {
     if (!isset($_COOKIE['ShowExplodingLetters'])) {
         setcookie('ShowExplodingLetters', 'true', [
+            'expires' => time() + 60 * 60 * 24,
             'path' => '/',
+            // 'secure' => true,
             'samesite' => 'Lax',
         ]);
     }
