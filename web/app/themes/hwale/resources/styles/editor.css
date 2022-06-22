@@ -1,0 +1,73 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  body {
+    @apply font-normal text-white font-poppins text-body bg-black-light selection:bg-white selection:text-black-light;
+  }
+
+  h1 {
+    @apply font-thin uppercase text-h1-sm md:text-h1-md lg:text-h1;
+  }
+
+  h2 {
+    @apply font-bold text-h2-sm md:text-h2-md lg:text-h2;
+  }
+
+  h3 {
+    @apply font-bold text-h3;
+  }
+
+  input[type="search"]::-webkit-search-cancel-button {
+    @apply hidden;
+  }
+}
+
+@layer components {
+  svg #logoCursor {
+    @apply group-hover:animate-blinking-cursor group-focus:animate-blinking-cursor group-active:animate-blinking-cursor;
+  }
+
+  svg #scope {
+    @apply transition-all;
+  }
+}
+
+@layer utilities {
+  .swup-transition-fade {
+    @apply transition-opacity duration-300 opacity-100;
+  }
+
+  html.is-animating .swup-transition-fade {
+    @apply opacity-0;
+  }
+
+  .cms strong {
+    @apply text-red;
+  }
+
+  .cms p {
+    @apply mb-6;
+  }
+
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animate-delay-1500 {
+    animation-delay: 1500ms;
+  }
+
+  .animate-delay-8s {
+    animation-delay: 8s;
+  }
+
+  .animate-delay-10s {
+    animation-delay: 10s;
+  }
+
+  .animate-duration-2000 {
+    animation-duration: 2000ms;
+  }
+}
