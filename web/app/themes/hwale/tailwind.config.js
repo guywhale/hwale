@@ -233,6 +233,7 @@ module.exports = {
         '45': '11.25rem',
         '47.5': '11.875rem',
         '65': '16.25rem',
+        '0.75em': '0.75em',
       },
       transitionProperty: {
         'max-width': 'max-width',
