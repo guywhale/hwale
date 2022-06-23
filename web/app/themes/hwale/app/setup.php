@@ -151,3 +151,52 @@ add_action('init', function () {
         ]);
     }
 });
+
+/**
+ * Work Custom Post Type
+ *
+ * Register 'Work' custom post type
+ *
+ * @return void
+ **/
+
+add_action('init', function () {
+    $labels = [
+        'name'                  => _x('Work', 'Post type general name', 'textdomain'),
+        'singular_name'         => _x('Work', 'Post type singular name', 'textdomain'),
+        'menu_name'             => _x('Work', 'Admin Menu text', 'textdomain'),
+        'name_admin_bar'        => _x('Work', 'Add New on Toolbar', 'textdomain'),
+        'add_new'               => __('Add New', 'textdomain'),
+        'add_new_item'          => __('Add New Work', 'textdomain'),
+        'new_item'              => __('New Work', 'textdomain'),
+        'edit_item'             => __('Edit Work', 'textdomain'),
+        'view_item'             => __('View Work', 'textdomain'),
+        'all_items'             => __('All Work', 'textdomain'),
+        'search_items'          => __('Search Work', 'textdomain'),
+        'parent_item_colon'     => __('Parent Work:', 'textdomain'),
+        'not_found'             => __('No work found.', 'textdomain'),
+        'not_found_in_trash'    => __('No work found in Trash.', 'textdomain'),
+    ];
+
+    $args = [
+        'labels'              => $labels,
+        'description'         => 'Work custom post type.',
+        'exclude_from_search' => true,
+        'public'              => true,
+        'publicly_queryable'  => false,
+        'show_ui'             => true,
+        'show_in_menu'        => true,
+        'menu_icon'           => 'dashicons-media-code',
+        'query_var'           => true,
+        'rewrite'             => ['slug' => 'work'],
+        'capability_type'     => 'post',
+        'has_archive'         => false,
+        'hierarchical'        => false,
+        'menu_position'       => 20,
+        'supports'            => ['title', 'editor', 'author', 'thumbnail'],
+        'taxonomies'          => ['category', 'post_tag'],
+        'show_in_rest'        => true
+    ];
+
+    register_post_type('work', $args);
+});
