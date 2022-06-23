@@ -8,7 +8,7 @@
         @endforeach
       @endif
     </div>
-    <div class="flex flex-wrap items-center justify-center w-1/2 h-screen">
+    <div class="flex flex-wrap items-center justify-center w-1/2 h-screen overflow-y-scroll snap-y snap-mandatory">
       @if ($work['content'])
         @foreach ($work['content'] as $slide => $content)
           {{-- @dump($slide) --}}
