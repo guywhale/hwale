@@ -12,6 +12,7 @@ module.exports = {
         'picture-in': 'pictureIn 2s ease-in-out forwards',
         'rotate-3d-x': 'rotate3dX 2s ease-in-out forwards',
         'slide-in-left': 'slideInLeft 1.5s ease-in-out forwards',
+        'slide-in-right': 'slideInRight 1.5s ease-in-out forwards',
         'text-shadow': 'textShadow 1.6s infinite',
       },
       backgroundImage: {
@@ -170,6 +171,10 @@ module.exports = {
         },
         slideInLeft: {
           '0%': { transform: 'translateX(-200px)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' }
+        },
+        slideInRight: {
+          '0%': { transform: 'translateX(400px)', opacity: '0' },
           '100%': { transform: 'translateX(0)', opacity: '1' }
         },
         textShadow: {
