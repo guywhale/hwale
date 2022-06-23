@@ -191,7 +191,7 @@ class WorkSlider extends Block
                 // Populate content array
                 $slideContent["slide-{$count}"]['title'] = get_the_title();
                 $slideContent["slide-{$count}"]['content'] = get_the_content();
-                $slideContent["slide-{$count}"]['tags'] = get_tags();
+                $slideContent["slide-{$count}"]['tags'] = get_the_tags();
                 $slideContent["slide-{$count}"]['button'] = get_field('site_link', get_the_ID());
             }
         }

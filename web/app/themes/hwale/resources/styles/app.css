@@ -15,7 +15,8 @@
     @apply font-bold text-h2-sm md:text-h2-md lg:text-h2;
   }
 
-  h3 {
+  h3,
+  .h3 {
     @apply font-bold text-h3;
   }
 
