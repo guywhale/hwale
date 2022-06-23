@@ -126,3 +126,28 @@ add_action('widgets_init', function () {
         'id' => 'sidebar-footer'
     ] + $config);
 });
+
+/**
+ * Add menu order metabox to pages
+ *
+ * @return void
+ **/
+add_action('init', function () {
+    add_post_type_support('page', 'page-attributes');
+});
+
+/**
+ * Check for cookie to run exploding letters animation.
+ * Create if not found.
+ * @return void
+ **/
+add_action('init', function () {
+    if (!isset($_COOKIE['ShowExplodingLetters'])) {
+        setcookie('ShowExplodingLetters', 'true', [
+            'expires' => time() + 60 * 60 * 24,
+            'path' => '/',
+            // 'secure' => true,
+            'samesite' => 'Lax',
+        ]);
+    }
+});
