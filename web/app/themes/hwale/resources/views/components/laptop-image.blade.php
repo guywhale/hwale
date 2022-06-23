@@ -13,6 +13,6 @@
       (max-width: 1535px) 580px,
       {{ $laptopImage['width'] }}px
     "
-    class="lg:max-w-[452px] xl:max-w-[580px] 2xl:max-w-[693px]"
+    class="absolute lg:max-w-[452px] xl:max-w-[580px] 2xl:max-w-[693px]"
   >
 @endif
