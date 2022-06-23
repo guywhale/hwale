@@ -140,6 +140,7 @@ class WorkSlider extends Block
     {
         return [
             'work' => $this->work(),
+            'laptopImage' => $this->laptopImage(),
         ];
     }
 
@@ -150,14 +151,12 @@ class WorkSlider extends Block
      */
     public function fields()
     {
-        // $workSlider = new FieldsBuilder('work_slider');
+        $workSlider = new FieldsBuilder('work_slider');
 
-        // $workSlider
-        //     ->addRepeater('tools')
-        //         ->addText('tool')
-        //     ->endRepeater();
+        $workSlider
+            ->addImage('laptop_image');
 
-        // return $workSlider->build();
+        return $workSlider->build();
     }
 
     /**
@@ -184,15 +183,19 @@ class WorkSlider extends Block
             while ($workQuery->have_posts()) {
                 $workQuery->the_post();
                 $count++;
+
+                if ($count < 10) {
+                    $count = "0{$count}";
+                }
+
                 // Populate images array
-                $slideImages["slide-{$count}"]['title'] = get_the_title();
-                $slideImages["slide-{$count}"]['image'] = get_the_post_thumbnail_url();
+                $slideImages["{$count}"]['image'] = get_the_post_thumbnail_url();
 
                 // Populate content array
-                $slideContent["slide-{$count}"]['title'] = get_the_title();
-                $slideContent["slide-{$count}"]['content'] = get_the_content();
-                $slideContent["slide-{$count}"]['tags'] = get_the_tags();
-                $slideContent["slide-{$count}"]['button'] = get_field('site_link', get_the_ID());
+                $slideContent["{$count}"]['title'] = get_the_title();
+                $slideContent["{$count}"]['content'] = get_the_content();
+                $slideContent["{$count}"]['tags'] = get_the_tags();
+                $slideContent["{$count}"]['button'] = get_field('site_link', get_the_ID());
             }
         }
 
@@ -206,6 +209,16 @@ class WorkSlider extends Block
             'images' => $slideImages,
             'content' => $slideContent,
         ];
+    }
+
+    /**
+     * Set the laptop image
+     *
+     * @return array
+     */
+    public function laptopImage()
+    {
+        return get_field('laptop_image');
     }
 
     /**
