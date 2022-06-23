@@ -1,6 +1,6 @@
 <div class="{{ $block->classes }}">
-  <div class="flex w-full">
-    <div class="relative h-screen first:w-1/2">
+  <div class="flex flex-col w-full lg:flex-row">
+    <div class="relative w-full h-1/3-screen md:h-1/2-screen lg:h-screen lg:w-1/2">
       @if ($work['images'])
         @foreach ($work['images'] as $slideNumber => $image)
           {{-- @dump($slideNumber)
@@ -12,7 +12,7 @@
         <x-laptop-image :laptopImage="$laptopImage" />
       </div>
     </div>
-    <div class="flex flex-wrap items-center justify-center w-1/2 h-screen overflow-y-scroll snap-y snap-mandatory px-7.5">
+    <div class="flex flex-wrap items-center justify-center lg:w-1/2 w-full h-2/3-screen md:h-1/2-screen lg:h-screen overflow-y-scroll snap-y snap-mandatory px-7.5">
       @if ($work['content'])
         @foreach ($work['content'] as $slideNumber => $content)
           {{-- @dump($slideNumber) --}}

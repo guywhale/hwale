@@ -1,4 +1,4 @@
-<div class="flex items-center justify-center h-screen basis-full snap-start snap-always">
+<div class="flex items-center justify-center h-full basis-full snap-start snap-always">
   <div class="xl:w-3/4 2xl:w-2/3">
     @if ($title)
       <h2 class="mb-4 xl:mb-6 h3">
