@@ -15,16 +15,20 @@
         </div>
       @endif
     </div>
-    <div class="flex flex-wrap items-center justify-center lg:w-1/2 w-full h-2/3-screen md:h-1/2-screen lg:h-screen px-7.5 animate-slide-in-right">
+    <div class="swiper flex flex-wrap items-center justify-center lg:w-1/2 w-full h-2/3-screen md:h-1/2-screen lg:h-screen px-7.5 animate-slide-in-right"
+      data-content-slider
+    >
       @if ($work['content'])
-        @foreach ($work['content'] as $slideNumber => $content)
-          {{-- @dump($slideNumber) --}}
-          <x-slide-text :title="$content['title']"
-            :content="$content['content']"
-            :tags="$content['tags']"
-            :button="$content['button']"
-          />
-        @endforeach
+        <div class="h-full swiper-wrapper">
+          @foreach ($work['content'] as $slideNumber => $content)
+            {{-- @dump($slideNumber) --}}
+            <x-slide-text :title="$content['title']"
+              :content="$content['content']"
+              :tags="$content['tags']"
+              :button="$content['button']"
+            />
+          @endforeach
+        </div>
       @endif
     </div>
   </div>
