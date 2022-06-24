@@ -87,12 +87,25 @@
   @apply pt-0 transition-all duration-300 -translate-y-full bg-black-light;
 }
 
+/* Slider */
+.prev-slide,
+.next-slide {
+  filter: drop-shadow(-1px 1px 3px rgba(255, 255, 255, 0.5));
+}
+.prev-slide:hover path,
+.next-slide:hover path {
+  @apply transition-all;
+  fill: white;
+}
+
+
 .swiper-pagination-vertical.swiper-pagination-bullets {
   @apply top-unset transform-none;
 }
 
 .swiper-pagination-bullet {
   @apply w-2.5 h-2.5 transition-all bg-transparent border border-white;
+  filter: drop-shadow(-1px 1px 3px rgba(255, 255, 255, 0.5));
 }
 
 .swiper-pagination-bullet-active {
