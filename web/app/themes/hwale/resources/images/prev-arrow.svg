@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18">
+  <g id="prev-arrow" fill="none">
+    <path d="M9.5,0,19,18H0Z" stroke="none"/>
+    <path d="M 9.5 2.142427444458008 L 1.658502578735352 17 L 17.34149742126465 17 L 9.5 2.142427444458008 M 9.5 0 L 19 18 L 0 18 L 9.5 0 Z" stroke="none" fill="#fff"/>
+  </g>
+</svg>

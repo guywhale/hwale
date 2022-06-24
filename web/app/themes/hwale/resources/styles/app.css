@@ -86,3 +86,20 @@
 .headroom--unpinned {
   @apply pt-0 transition-all duration-300 -translate-y-full bg-black-light;
 }
+
+.swiper-pagination-vertical.swiper-pagination-bullets {
+  @apply top-unset transform-none;
+}
+
+.swiper-pagination-bullet {
+  @apply w-2.5 h-2.5 transition-all bg-transparent border border-white;
+}
+
+.swiper-pagination-bullet-active {
+  @apply transition-all bg-white;
+}
+
+.swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
+  @apply my-3;
+}

@@ -1,5 +1,5 @@
-<div class="flex items-center justify-center h-full swiper-slide basis-full">
-  <div class="xl:w-3/4 2xl:w-2/3">
+<div class="flex items-center h-full swiper-slide basis-full">
+  <div class="xl:max-w-[500px]">
     @if ($title)
       <h2 class="mb-4 xl:mb-6 h3">
         {!! $title !!}<span class="text-red animate-blinking-cursor">_</span>
