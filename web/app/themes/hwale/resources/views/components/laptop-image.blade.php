@@ -22,10 +22,20 @@
           data-image-slider
         >
           <div class="h-full swiper-wrapper">
-            @foreach ($imageSlides as $slides)
+            @foreach ($imageSlides as $slide)
             <div class="w-full h-full swiper-slide">
-              <img src="{{ $slides['image'] }}"
-                alt=""
+              <img src="{{ $slide['image'] }}"
+                alt="{{ $slide['alt'] }}"
+                srcset="
+                  {{ $slide['image'] }} 338w,
+                  {{ $slide['image'] }} 389w,
+                  {{ $slide['image'] }} 485w
+                "
+                sizes="
+                  (max-width: 1279px) 338px,
+                  (max-width: 1535px) 389px,
+                  485px
+                "
                 class="object-cover w-full h-full swiper-slide"
               >
             </div>

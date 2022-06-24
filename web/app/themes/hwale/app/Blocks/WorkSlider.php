@@ -190,6 +190,7 @@ class WorkSlider extends Block
 
                 // Populate images array
                 $slideImages["{$count}"]['image'] = get_the_post_thumbnail_url();
+                $slideImages["{$count}"]['alt'] = get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true);
 
                 // Populate content array
                 $slideContent["{$count}"]['title'] = get_the_title();
