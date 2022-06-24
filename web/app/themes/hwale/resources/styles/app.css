@@ -99,8 +99,7 @@
 }
 .prev-slide:hover path,
 .next-slide:hover path {
-  @apply transition-all;
-  fill: white;
+  @apply transition-all fill-white;
 }
 
 
