@@ -60,6 +60,19 @@ const main = async (err) => {
           console.log(err);
         });
     }
+
+    if (document.querySelector('.swiper')) {
+      // const sliders = document.querySelectorAll('.swiper');
+
+      import('./Components/WorkSlider')
+        .then((WorkSlider) => {
+          WorkSlider.default();
+          // [...sliders].map(el => WorkSlider.default());
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
   }
 
 };
