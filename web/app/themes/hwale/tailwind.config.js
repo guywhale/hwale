@@ -55,6 +55,9 @@ module.exports = {
           xl: '60px',
         }
       },
+      dropShadow: {
+        'main': '-1px 1px 3px rgba(255, 255, 255, 0.5)',
+      },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
         'dm-sans': ['DM Sans', 'sans-serif'],

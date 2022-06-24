@@ -9,7 +9,7 @@
   }
 
   h1 {
-    @apply font-thin uppercase text-h1-sm md:text-h1-md lg:text-h1;
+    @apply font-thin uppercase text-h1-sm md:text-h1-md lg:text-h1 drop-shadow-main;
   }
 
   h2 {
@@ -95,7 +95,7 @@
 
 .prev-slide,
 .next-slide {
-  filter: drop-shadow(-1px 1px 3px rgba(255, 255, 255, 0.5));
+  @apply drop-shadow-main;
 }
 .prev-slide:hover path,
 .next-slide:hover path {
@@ -109,8 +109,7 @@
 }
 
 .swiper-pagination-bullet {
-  @apply w-2.5 h-2.5 transition-all bg-transparent border border-white;
-  filter: drop-shadow(-1px 1px 3px rgba(255, 255, 255, 0.5));
+  @apply w-2.5 h-2.5 transition-all bg-transparent border border-white drop-shadow-main;
 }
 
 .swiper-pagination-bullet-active {
