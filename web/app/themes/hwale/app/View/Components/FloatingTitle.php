@@ -8,7 +8,7 @@ class FloatingTitle extends Component
 {
     public $pageTitle;
     public $pageNumber;
-    public $positionOnMobile;
+    public $position;
 
     /**
      * Create a new component instance.
@@ -19,12 +19,13 @@ class FloatingTitle extends Component
     {
         global $post;
 
-        $this->positionOnMobile = 'top-40 left-7';
+        $this->position = 'top-40 left-7 lg:top-1/3-screen lg:right-15 lg:left-unset';
 
         if (is_front_page()) {
-            $this->positionOnMobile = 'top-40 right-7';
+            $this->position = 'top-40 right-7 lg:top-1/3-screen lg:right-15 lg:left-unset';
         } elseif (get_the_title() === 'Work') {
-            $this->positionOnMobile = 'top-40 left-7 md:top-1/2-screen-50 md:right-7 md:left-unset';
+            // $this->position = 'hidden';
+            $this->position = 'top-40 left-7 md:top-1/2-screen-50 md:right-7 md:left-unset lg:top-52';
         }
 
         $this->pageNumber = $post->menu_order;
