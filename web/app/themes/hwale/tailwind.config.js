@@ -221,7 +221,7 @@ module.exports = {
         'unset': 'unset',
         '1/3': '33.3333%',
         '1/2-screen': '50vh',
-        '1/2-screen-50': 'calc(50vh - 50px)',
+        '1/2-screen-26': 'calc(50vh - 26px)',
         '1/3-screen': '33.3333vh',
         '2/3-screen': '66.6666vh',
         '0.75': '0.1875rem',

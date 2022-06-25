@@ -1,5 +1,5 @@
 @if ($laptopImage)
-  <div class="absolute right-0 w-full px-3.75 md:px-7.5 xl:px-15 text-center">
+  <div class="absolute right-0 w-full md:pt-6 lg:pt-0 md:px-7.5 xl:px-15 text-center">
     <span class="relative inline-flex items-center justify-center">
       <img src="{{ $laptopImage['url'] }}"
         alt="{{ $laptopImage['alt'] }}"

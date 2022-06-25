@@ -1,4 +1,4 @@
-<div class="flex items-center px-3.75 md:px-0 md:h-full swiper-slide basis-full animate-slide-in-left md:animate-none">
+<div class="flex items-start lg:items-center px-3.75 md:px-0 md:h-full swiper-slide basis-full animate-slide-in-left md:animate-none">
   <div class="lg:pr-3.75 xl:pr-7.5 2xl:pr-0">
     @if ($title)
       <h2 class="mb-4 xl:mb-6 h3">

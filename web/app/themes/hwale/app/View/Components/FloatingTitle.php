@@ -25,7 +25,7 @@ class FloatingTitle extends Component
             $this->position = 'top-40 right-7 lg:top-1/3-screen lg:right-15 lg:left-unset';
         } elseif (get_the_title() === 'Work') {
             // $this->position = 'hidden';
-            $this->position = 'top-40 left-7 md:top-1/2-screen-50 md:right-7 md:left-unset lg:top-52';
+            $this->position = 'top-40 left-7 md:top-1/2-screen-26 md:right-7 md:left-unset lg:top-52';
         }
 
         $this->pageNumber = $post->menu_order;
