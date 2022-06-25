@@ -90,7 +90,7 @@
 /* Slider */
 
 [data-image-slider] {
-  @apply absolute lg:top-[19px] lg:left-[58px] lg:w-[338px] lg:h-[211px]  xl:top-[22px] xl:left-[67px] xl:w-[389px] xl:h-[243px] 2xl:top-[27px] 2xl:left-[83px] 2xl:w-[485px] 2xl:h-[303px];
+  @apply hidden absolute lg:top-[19px] lg:left-[58px] lg:w-[338px] lg:h-[211px]  xl:top-[22px] xl:left-[67px] xl:w-[389px] xl:h-[243px] 2xl:top-[27px] 2xl:left-[83px] 2xl:w-[485px] 2xl:h-[303px];
 }
 
 .prev-slide,

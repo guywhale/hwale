@@ -12,7 +12,7 @@ const WorkSlider = (el) => {
       forceToAxis: true,
       thresholdDelta: 20,
     },
-    resistanceRatio: 1,
+    resistanceRatio: 0.8,
     slidesPerView: 1,
   })
 
@@ -40,7 +40,7 @@ const WorkSlider = (el) => {
       el: '.slider-pagination',
       type: 'bullets',
     },
-    resistanceRatio: 1,
+    resistanceRatio: 0.8,
     slidesPerView: 1,
   })
 }

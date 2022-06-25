@@ -1,5 +1,5 @@
 <div class="flex items-center h-full swiper-slide basis-full">
-  <div class="xl:max-w-[500px]">
+  <div class="max-w-[500px]">
     @if ($title)
       <h2 class="mb-4 xl:mb-6 h3">
         {!! $title !!}<span class="text-red animate-blinking-cursor">_</span>
@@ -23,7 +23,7 @@
     @if ($button)
       <x-button type="link"
         :url="$button['url']"
-        classes="lg:mt-8 xl:mt-11"
+        classes="mt-8 xl:mt-11"
         :target="$button['target']"
         label="View Site"
       />
