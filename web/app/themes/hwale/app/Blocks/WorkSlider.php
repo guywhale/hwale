@@ -172,6 +172,7 @@ class WorkSlider extends Block
     {
         $slideImages = [];
         $slideContent = [];
+        $slideBoth = [];
         $count = 0;
 
         $workQuery = new WP_Query([
@@ -197,6 +198,14 @@ class WorkSlider extends Block
                 $slideContent["{$count}"]['content'] = get_the_content();
                 $slideContent["{$count}"]['tags'] = get_the_tags();
                 $slideContent["{$count}"]['button'] = get_field('site_link', get_the_ID());
+
+                // Populate both array
+                $slideBoth["{$count}"]['image'] = get_the_post_thumbnail_url();
+                $slideBoth["{$count}"]['alt'] = get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true);
+                $slideBoth["{$count}"]['title'] = get_the_title();
+                $slideBoth["{$count}"]['content'] = get_the_content();
+                $slideBoth["{$count}"]['tags'] = get_the_tags();
+                $slideBoth["{$count}"]['button'] = get_field('site_link', get_the_ID());
             }
         }
 
@@ -209,6 +218,7 @@ class WorkSlider extends Block
         return [
             'images' => $slideImages,
             'content' => $slideContent,
+            'both' => $slideBoth,
         ];
     }
 

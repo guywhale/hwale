@@ -1,5 +1,5 @@
 <div class="{{ $block->classes }} overflow-x-hidden">
-  <div class="flex flex-col w-full lg:flex-row">
+  <div class="flex-col hidden w-full md:flex lg:flex-row">
     <div class="relative order-2 lg:order-1 flex items-center justify-end w-full h-1/3-screen bg-red-dark md:h-1/2-screen lg:h-screen lg:w-1/2 animate-slide-in-left lg:flex-row px-3.75 md:px-7.5 xl:px-15">
       <x-laptop-image :laptopImage="$laptopImage"
         :imageSlides="$work['images']"
@@ -10,7 +10,7 @@
     >
       @if ($work['content'])
         <div class="h-full swiper-wrapper mt-7.5 lg:mt-0">
-          @foreach ($work['content'] as $slideNumber => $content)
+          @foreach ($work['content'] as $content)
             <x-slide-text :title="$content['title']"
               :content="$content['content']"
               :tags="$content['tags']"
@@ -21,6 +21,26 @@
       @endif
       <x-slider-controls />
     </div>
+  </div>
+
+  <div class="pt-55 pb-28 md:hidden">
+    @if ($work['both'])
+      @foreach ($work['both'] as $both)
+      <div class="py-12">
+        <img src="{{ $both['image'] }}"
+          alt="{{ $both['alt']}}"
+          width="767px"
+          height="363px"
+          class="mb-8 animate-slide-in-right"
+        >
+        <x-slide-text :title="$both['title']"
+          :content="$both['content']"
+          :tags="$both['tags']"
+          :button="$both['button']"
+        />
+      </div>
+      @endforeach
+    @endif
   </div>
   <div>
     <InnerBlocks />

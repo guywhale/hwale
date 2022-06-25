@@ -17,7 +17,7 @@
           (max-width: 1535px) 520px,
           648px
         "
-        class="md:max-w-[600px] lg:max-w-[452px] xl:max-w-[520px] 2xl:max-w-[648px]"
+        class="hidden md:block md:max-w-[600px] lg:max-w-[452px] xl:max-w-[520px] 2xl:max-w-[648px]"
       >
       @if ($imageSlides)
         <div class="swiper" data-image-slider>
@@ -27,12 +27,14 @@
               <img src="{{ $slide['image'] }}"
                 alt="{{ $slide['alt'] }}"
                 srcset="
+                  {{ $slide['image'] }} 767w,
                   {{ $slide['image'] }} 449w,
                   {{ $slide['image'] }} 338w,
                   {{ $slide['image'] }} 389w,
                   {{ $slide['image'] }} 485w
                 "
                 sizes="
+                  (max-width: 767px) 767px,
                   (max-width: 1023px) 449px,
                   (max-width: 1279px) 338px,
                   (max-width: 1535px) 389px,

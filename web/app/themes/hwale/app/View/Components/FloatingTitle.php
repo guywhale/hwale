@@ -24,7 +24,7 @@ class FloatingTitle extends Component
         if (is_front_page()) {
             $this->positionOnMobile = 'top-40 right-7';
         } elseif (get_the_title() === 'Work') {
-            $this->positionOnMobile = 'top-1/2-screen-50 right-7';
+            $this->positionOnMobile = 'top-40 left-7 md:top-1/2-screen-50 md:right-7 md:left-unset';
         }
 
         $this->pageNumber = $post->menu_order;
