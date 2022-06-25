@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1837.659" height="483.717" viewBox="0 0 1837.659 483.717">
+  <g id="animated-arrow" transform="translate(-84 -203.283)">
+    <g id="white">
+      <path id="white--line" d="M6921,4891c-69.149,24.322-193.913,396.614-317,395-133.065-1.745-265.466-376.866-362-330-179.036,86.92-199.333,320-444,330s-296,6-296,6H5206" transform="translate(-5001 -4680)" fill="none" stroke="#fff" stroke-width="10" stroke-dasharray="30 30"/>
+      <g id="white--arrow" transform="translate(237 687) rotate(-180)">
+        <path id="white--arrow-2" d="M0,0H150V150H0Z" fill="none"/>
+        <path id="white--arrow-1" d="M16.07,27.24,68.64,53,16,45l.07-17.76M68.57,97,16,122.76V105l52.57-8M2.07,3,2,59,107,75,2,91l.07,56L149,75Z" fill="#fff" stroke="#fff" stroke-width="1"/>
+      </g>
+    </g>
+    <g id="red" transform="translate(-3 -3)">
+      <path id="red--line" d="M6921,4891c-69.149,24.322-193.913,396.614-317,395-133.065-1.745-265.466-376.866-362-330-179.036,86.92-199.333,320-444,330s-296,6-296,6H5206" transform="translate(-5001 -4680)" fill="none" stroke="#f14d4c" stroke-width="10" stroke-dasharray="30 30"/>
+      <g id="red--arrow" transform="translate(237 687) rotate(-180)">
+        <path id="red--arrow-2" d="M0,0H150V150H0Z" fill="none"/>
+        <path id="red--arrow-1" d="M16.07,27.24,68.64,53,16,45l.07-17.76M68.57,97,16,122.76V105l52.57-8M2.07,3,2,59,107,75,2,91l.07,56L149,75Z" fill="#f14d4c"/>
+      </g>
+    </g>
+  </g>
+</svg>
