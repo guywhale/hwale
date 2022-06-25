@@ -28,7 +28,7 @@
     @if ($button)
       <x-button type="link"
         :url="$button['url']"
-        classes="mt-14 {{ $cookieStatus ? 'animate-delay-1500' : 'animate-delay-10s' }}"
+        classes="mt-14 {{ $cookieStatus ? 'animate-delay-300' : 'animate-delay-10s' }}"
         :target="$button['target']"
         :label="$button['title']"
       />
