@@ -41,6 +41,7 @@ const WorkSlider = (el) => {
       type: 'bullets',
     },
     resistanceRatio: 0.8,
+    roundLengths: true,
     slidesPerView: 1,
   })
 }
