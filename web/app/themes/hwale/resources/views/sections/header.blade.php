@@ -8,7 +8,7 @@
     </a>
 
     @if (has_nav_menu('primary_navigation'))
-      <div class="absolute top-0 left-0 block w-screen min-h-screen transition-transform pt-28 lg:pt-0 bg-black-light lg:static lg:inline lg:w-auto lg:min-h-0 lg:bg-transparent lg:translate-x-0"
+      <div class="absolute top-0 left-0 block w-screen min-h-screen transition-transform pt-28 lg:pt-0 bg-black-light lg:static lg:inline lg:w-auto lg:min-h-0 lg:bg-transparent lg:translate-x-0 lg:opacity-100"
         :class="open ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'"
       >
         <nav class="container flex flex-col lg:px-0 lg:mx-0 lg:flex-row"
