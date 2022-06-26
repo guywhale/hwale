@@ -1,4 +1,3 @@
-
 <span class="h1-wrapper fixed {{ $position }} z-10 pointer-events-none block"
   x-data
   @scroll.window="$el.style.transform = `translateY(${window.scrollY * -0.4}px)`;"

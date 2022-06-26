@@ -19,22 +19,24 @@ class FloatingTitle extends Component
     {
         global $post;
 
+        $this->pageNumber = $post->menu_order ?? 6;
+        $this->pageTitle = get_the_title() ?? 'Search';
         $this->position = 'top-40 left-7 lg:top-1/3-screen lg:right-15 lg:left-unset';
 
         if (is_front_page()) {
             $this->position = 'top-40 right-7 lg:top-1/3-screen lg:right-15 lg:left-unset';
         } elseif (get_the_title() === 'Work') {
-            // $this->position = 'hidden';
             $this->position = 'top-40 left-7 md:top-1/2-screen-26 md:right-7 md:left-unset lg:top-1/3-screen lg:right-15';
         }
 
-        $this->pageNumber = $post->menu_order;
-
-        if ($post->menu_order < 10) {
-            $this->pageNumber = "0{$post->menu_order}";
+        if (is_search()) {
+            $this->pageNumber = 6;
+            $this->pageTitle = 'Search';
         }
 
-        $this->pageTitle = get_the_title();
+        if ($this->pageNumber < 10) {
+            $this->pageNumber = "0{$this->pageNumber}";
+        }
     }
 
     /**
