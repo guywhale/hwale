@@ -25,13 +25,16 @@ class FloatingTitle extends Component
 
         if (is_front_page()) {
             $this->position = 'top-40 right-7 lg:top-1/3-screen lg:right-15 lg:left-unset';
-        } elseif (get_the_title() === 'Work') {
+        }
+
+        if (get_the_title() === 'Work') {
             $this->position = 'top-40 left-7 md:top-1/2-screen-26 md:right-7 md:left-unset lg:top-1/3-screen lg:right-15';
         }
 
         if (is_search()) {
             $this->pageNumber = 6;
             $this->pageTitle = 'Search';
+            $this->position = 'top-40 left-7 lg:top-1/3-screen lg:right-15 lg:left-unset';
         }
 
         if ($this->pageNumber < 10) {
