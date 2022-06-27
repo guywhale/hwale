@@ -1,5 +1,5 @@
-<a href="{{ $link }}" class="block group">
-  <article @php(post_class('flex flex-col lg:flex-row lg:items-center py-12 lg:py-7.5 border-t last:border-b border-white'))>
+<a href="{{ $link }}" class="block group py-12 lg:py-7.5 border-t last:border-b border-white">
+  <article @php(post_class('flex flex-col lg:flex-row lg:items-center'))>
     <div class="transition-all border border-white lg:max-w-300 drop-shadow-none group-hover:border-4 group-hover:drop-shadow-preview-image">
       @if ($previewImage)
         <img src="{{ $previewImage['url']}}"
