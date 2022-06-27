@@ -221,6 +221,7 @@ module.exports = {
         '64': '16rem',
       },
       spacing: {
+        'full-60': 'calc(100% - 60px)',
         'unset': 'unset',
         '1/3': '33.3333%',
         '1/2-screen': '50vh',

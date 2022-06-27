@@ -140,8 +140,8 @@ class Contact extends Block
         return [
             'text' => $this->text(),
             'email' => $this->email(),
-            'linkedin'=> $this->linkedin(),
-            'image'=> $this->image(),
+            'linkedin' => $this->linkedin(),
+            'image' => $this->image(),
         ];
     }
 

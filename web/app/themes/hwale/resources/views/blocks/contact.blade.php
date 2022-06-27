@@ -25,12 +25,14 @@
     </div>
   </div>
 
+  {!! get_svg('images.animated-arrow', 'absolute top-[20vh] right-0 w-full-60') !!}
+
   @if ($image)
     <img src="{{ $image['url'] }}"
       alt="{{ $image['alt'] }}"
       srcset=""
       sizes=""
-      class="absolute bottom-0 right-15"
+      class="absolute bottom-0 right-0 md:right-15"
     >
   @endif
 

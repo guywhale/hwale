@@ -70,8 +70,19 @@ const main = async (err) => {
           console.log(err);
         });
     }
-  }
 
+    if (document.querySelector('[data-animated-arrow]')) {
+      const arrows = document.querySelectorAll('[data-animated-arrow]');
+
+      import('./Components/AnimatedArrow')
+        .then((AnimatedArrow) => {
+          [...arrows].map(el => AnimatedArrow.default(el));
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+  }
 };
 
 /**
