@@ -3,7 +3,7 @@
 @section('content')
   <x-floating-title />
 
-  <div class="min-h-screen pt-32 pb-40 lg:pb-56">
+  <div class="min-h-screen pb-40 pt-68 md:pt-75 lg:pt-32 lg:pb-56">
     <div class="container">
       <x-search-text />
       {!! get_search_form() !!}
