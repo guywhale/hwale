@@ -46,7 +46,7 @@
   }
 
   .cms strong {
-    @apply text-red;
+    @apply font-normal text-red;
   }
 
   .cms p {
