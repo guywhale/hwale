@@ -20,7 +20,7 @@ class SearchText extends Component
         if (have_posts()) {
             $this->searchText = sprintf(
                 __(
-                    'Search results for' . $redColon . ' "%s"' . $blinkingCursor,
+                    'Search results for' . $redColon . ' "%s' . $blinkingCursor . '"',
                     'sage'
                 ),
                 get_search_query()
