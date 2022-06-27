@@ -18,7 +18,7 @@
 
   h3,
   .h3 {
-    @apply font-bold text-h3;
+    @apply font-bold text-h3-sm md:text-h3;
   }
 
   input[type="search"]::-webkit-search-cancel-button {

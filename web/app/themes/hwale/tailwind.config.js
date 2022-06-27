@@ -57,6 +57,7 @@ module.exports = {
       },
       dropShadow: {
         'main': '-1px 1px 3px rgba(255, 255, 255, 0.5)',
+        'preview-image': '0 3px 6px rgba(255, 255, 255, 0.77)',
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
@@ -104,6 +105,7 @@ module.exports = {
         'h2-md': ['2.8125rem', '4.1875rem'],
         'h2-sm': ['1.8125rem', '2.71875rem'],
         'h3': ['2.375rem', '3.375rem'],
+        'h3-sm': ['1.625rem', '1.875rem'],
         'nav': ['1rem', '1.5rem'],
         'nav-lg': ['2.5rem', '3.75rem'],
         'nav-sm': ['1.875rem', '1.875rem'],
@@ -215,6 +217,8 @@ module.exports = {
       },
       minWidth: {
         '35.5': '8.875rem',
+        '37.5': '9.375rem',
+        '64': '16rem',
       },
       spacing: {
         'unset': 'unset',
@@ -247,6 +251,7 @@ module.exports = {
         '47.5': '11.875rem',
         '55': '13.75rem',
         '65': '16.25rem',
+        '75': '18.75rem',
         '0.75em': '0.75em',
       },
       transitionProperty: {
