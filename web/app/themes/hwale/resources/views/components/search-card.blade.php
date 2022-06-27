@@ -2,7 +2,6 @@
   <article @php(post_class('flex flex-col lg:flex-row lg:items-center py-12 lg:py-7.5 border-t last:border-b border-white'))>
     <div class="transition-all border border-white lg:max-w-300 drop-shadow-none group-hover:border-4 group-hover:drop-shadow-preview-image">
       @if ($previewImage)
-        {{-- @dump($previewImage) --}}
         <img src="{{ $previewImage['url']}}"
           alt="{{ $previewImage['alt'] }}"
           srcset="
