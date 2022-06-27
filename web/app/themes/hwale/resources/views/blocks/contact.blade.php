@@ -1,11 +1,11 @@
 <div class="{{ $block->classes }} relative min-h-screen pt-40">
-  <div class="container">
+  <div class="container h-full">
     @if ($text)
       <div class="lg:w-1/2 cms animate-slide-in-left mb-9">
         {!! $text !!}
       </div>
     @endif
-    <div class="animate-slide-in-left animate-delay-300">
+    <div class="opacity-0 animate-slide-in-left animate-delay-300">
       @if ($email)
         <a href="mailto:{{ $email }}"
           target="_blank"
@@ -24,6 +24,15 @@
       @endif
     </div>
   </div>
+
+  @if ($image)
+    <img src="{{ $image['url'] }}"
+      alt="{{ $image['alt'] }}"
+      srcset=""
+      sizes=""
+      class="absolute bottom-0 right-15"
+    >
+  @endif
 
   <div>
     <InnerBlocks />
