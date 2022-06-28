@@ -22,8 +22,14 @@
             @scroll.window="$el.style.transform = `translateY(${window.scrollY * 0.2}px)`;"
           >
             <source media="(max-width: 1023px)"
-              srcset="{{ $image['sizes']['medium'] }} {{ $image['sizes']['medium-width'] }}w"
-              sizes="(max-width: 1023px) {{ $image['sizes']['medium-width'] }}"
+              srcset="
+                {{ $image['sizes']['medium'] }} {{ $image['sizes']['medium-width'] }}w,
+                {{ $image['url'] }} {{ $image['width'] }}w
+              "
+              sizes="
+                (max-width: 1023px) {{ $image['sizes']['medium-width'] }}px,
+                {{ $image['width'] }}px
+              "
             >
             <img src="{{ $image['url'] }}"
               alt="{{ $image['alt'] }}"
