@@ -25,7 +25,7 @@
     </div>
   </div>
 
-  <div class="absolute top-[20vh] right-0 w-full-60 -z-10">
+  <div class="absolute top-[33vh] xl:top-[20vh] right-0 w-full-60 -z-10">
     <div id="arrow" class="absolute w-[10.37%] -top-[20%] -left-[6.5%] inline-block">
       {!! get_svg('images.animated-arrow') !!}
     </div>
@@ -35,10 +35,17 @@
   @if ($image)
     <img src="{{ $image['url'] }}"
       alt="{{ $image['alt'] }}"
-      srcset=""
-      sizes=""
-      class="absolute bottom-0 right-0 translate-y-full animate-slide-up md:right-15"
-      data-gorilla
+      srcset="
+        {{ $image['url'] }} 424w,
+        {{ $image['url'] }} 550w,
+        {{ $image['url'] }} 620w
+      "
+      sizes="
+        (max-width: 1279px) 424px,
+        (max-width: 1535px) 550px,
+        620px
+      "
+      class="absolute bottom-0 translate-y-full animate-slide-up right-7.5 2xl:right-15"
     >
   @endif
 

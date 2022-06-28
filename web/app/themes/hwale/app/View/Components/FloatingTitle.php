@@ -9,6 +9,9 @@ class FloatingTitle extends Component
     public $pageTitle;
     public $pageNumber;
     public $position;
+    public $contactH1Size;
+    public $contactNumberPosition;
+    public $contactNumberSize;
 
     /**
      * Create a new component instance.
@@ -22,6 +25,9 @@ class FloatingTitle extends Component
         $this->pageNumber = $post->menu_order ?? 6;
         $this->pageTitle = get_the_title() ?? 'Search';
         $this->position = 'top-40 left-7 lg:top-1/3-screen lg:right-15 lg:left-unset';
+        $this->contactH1Size = null;
+        $this->contactNumberPosition = 'lg:-top-32.5 lg:-left-12';
+        $this->contactNumberSize = 'lg:text-h1-number';
 
         if (is_front_page()) {
             $this->position = 'top-40 right-7 lg:top-1/3-screen lg:right-15 lg:left-unset';
@@ -29,6 +35,12 @@ class FloatingTitle extends Component
 
         if (get_the_title() === 'Work') {
             $this->position = 'top-40 left-7 md:top-1/2-screen-26 md:right-7 md:left-unset lg:top-1/3-screen lg:right-15';
+        }
+
+        if (get_the_title() === 'Contact') {
+            $this->contactH1Size = 'lg:text-h1-contact xl:text-h1';
+            $this->contactNumberPosition = 'lg:-top-17 xl:-top-32.5 lg:-left-12';
+            $this->contactNumberSize = 'lg:text-h1-contact-number xl:text-h1-number';
         }
 
         if (is_search()) {

@@ -94,6 +94,14 @@ module.exports = {
           lineHeight: '3.75rem',
           letterSpacing: '.075em',
         }],
+        'h1-contact': ['11.125rem', {
+          lineHeight: '6.25rem',
+          letterSpacing: '.075em'
+        }],
+        'h1-contact-number':['3.4375rem', {
+          lineHeight: '3.4375rem',
+          letterSpacing: '.075em',
+        }],
         'h1-number': ['4.3125rem', {
           lineHeight: '6.5625rem',
           letterSpacing: '.075em',
@@ -248,6 +256,7 @@ module.exports = {
         '15.5': '3.875rem',
         '15.75': '3.9375rem',
         '16.25': '4.0625rem',
+        '17': '4.25rem',
         '21': '5.25rem',
         '21.5': '5.375rem',
         '22.5': '5.625rem',
