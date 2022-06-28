@@ -1,4 +1,4 @@
-<div class="{{ $block->classes }} relative min-h-screen pt-40 overflow-hidden">
+<div class="{{ $block->classes }} relative min-h-screen pt-65  md:pt-81.5 lg:pt-40 overflow-hidden">
   <div class="container h-full">
     @if ($text)
       <div class="lg:w-1/2 cms animate-slide-in-left mb-9">
@@ -25,7 +25,7 @@
     </div>
   </div>
 
-  <div class="absolute top-[33vh] xl:top-[20vh] right-0 w-full-60 -z-10">
+  <div class="relative -top-13.5 w-[200%] md:w-[150%] md:absolute md:top-[33vh] lg:top-[33vh] xl:top-[20vh] lg:right-0 lg:w-full-60 -z-10">
     <div id="arrow" class="absolute w-[10.37%] -top-[20%] -left-[6.5%] inline-block">
       {!! get_svg('images.animated-arrow') !!}
     </div>
@@ -36,16 +36,18 @@
     <img src="{{ $image['url'] }}"
       alt="{{ $image['alt'] }}"
       srcset="
+        {{ $image['sizes']['medium'] }} 300w,
         {{ $image['url'] }} 424w,
         {{ $image['url'] }} 550w,
         {{ $image['url'] }} 620w
       "
       sizes="
+        (max-width: 767px) 300px,
         (max-width: 1279px) 424px,
         (max-width: 1535px) 550px,
         620px
       "
-      class="absolute bottom-0 translate-y-full animate-slide-up right-7.5 2xl:right-15"
+      class="mx-auto md:mx-0 md:absolute bottom-0 translate-y-full animate-slide-up right-7.5 2xl:right-15"
     >
   @endif
 
