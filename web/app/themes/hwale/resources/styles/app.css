@@ -121,11 +121,16 @@
 }
 
 /* Animated arrow */
+#arrow svg {
+  opacity: 0;
+  animation: blinkingCursor 500ms linear 100ms forwards;
+}
+
 #white--cover,
 #red--cover {
   stroke-dasharray: 2200;
   stroke-dashoffset: 0;
-  animation: drawDashedLines 1.5s linear forwards;
+  animation: drawDashedLines 1.5s linear 25ms forwards;
 }
 
 @keyframes drawDashedLines {

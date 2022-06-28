@@ -1,4 +1,4 @@
-<div class="{{ $block->classes }} relative min-h-screen pt-40 overflow-x-hidden">
+<div class="{{ $block->classes }} relative min-h-screen pt-40 overflow-hidden">
   <div class="container h-full">
     @if ($text)
       <div class="lg:w-1/2 cms animate-slide-in-left mb-9">
@@ -37,7 +37,8 @@
       alt="{{ $image['alt'] }}"
       srcset=""
       sizes=""
-      class="absolute bottom-0 right-0 md:right-15"
+      class="absolute bottom-0 right-0 translate-y-full animate-slide-up md:right-15"
+      data-gorilla
     >
   @endif
 
