@@ -30,6 +30,7 @@
   >
   <button type="submit"
     class="absolute bottom-0 right-0"
+    aria-label="click to search"
   >
     {!! get_svg('images.telescope-down', 'w-auto h-7.5') !!}
   </button>
