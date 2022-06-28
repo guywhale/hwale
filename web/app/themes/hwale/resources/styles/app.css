@@ -119,3 +119,20 @@
 .swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
   @apply my-3;
 }
+
+/* Animated arrow */
+#white--cover,
+#red--cover {
+  stroke-dasharray: 2200;
+  stroke-dashoffset: 0;
+  animation: drawDashedLines 1.5s linear forwards;
+}
+
+@keyframes drawDashedLines {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -2200;
+  }
+}

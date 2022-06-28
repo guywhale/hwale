@@ -1,4 +1,4 @@
-<div class="{{ $block->classes }} relative min-h-screen pt-40">
+<div class="{{ $block->classes }} relative min-h-screen pt-40 overflow-x-hidden">
   <div class="container h-full">
     @if ($text)
       <div class="lg:w-1/2 cms animate-slide-in-left mb-9">
@@ -25,7 +25,12 @@
     </div>
   </div>
 
-  {!! get_svg('images.animated-arrow', 'absolute top-[20vh] right-0 w-full-60') !!}
+  <div class="absolute top-[20vh] right-0 w-full-60 -z-10">
+    <div id="arrow" class="absolute w-[10.37%] -top-[20%] -left-[6.5%] inline-block">
+      {!! get_svg('images.animated-arrow') !!}
+    </div>
+    {!! get_svg('images.animated-lines', 'w-full h-auto') !!}
+  </div>
 
   @if ($image)
     <img src="{{ $image['url'] }}"

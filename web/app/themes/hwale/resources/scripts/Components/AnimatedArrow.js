@@ -1,19 +1,17 @@
 import anime from 'animejs/lib/anime.es.js';
 
 const AnimatedArrow = (arrow) => {
-  console.log(arrow);
+  const pathRed = anime.path('#red--line');
 
-  // const path = anime.path('#white--line');
-
-  // anime({
-  //   targets: '#white',
-  //   translateX: path('x'),
-  //   translateY: path('y'),
-  //   rotate: path('angle'),
-  //   easing: 'linear',
-  //   duration: 2000,
-  //   loop: true
-  // });
+  anime({
+    targets: '#arrow',
+    translateX: pathRed('x'),
+    translateY: pathRed('y') ,
+    rotate: pathRed('angle'),
+    easing: 'linear',
+    duration: 1500,
+    // loop: true
+  });
 }
 
 export default AnimatedArrow;
