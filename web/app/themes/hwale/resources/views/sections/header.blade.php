@@ -3,7 +3,7 @@
   x-data="{ open: false }"
 >
   <div class="container flex items-center justify-between">
-    <a class="relative z-10 group" href="{{ home_url('/') }}">
+    <a class="relative z-10 group" href="{{ home_url('/') }}" aria-label="click to go to homepage">
       {!! get_svg('images.logo') !!}
     </a>
 
