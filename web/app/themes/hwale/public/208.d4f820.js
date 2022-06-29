@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksage=self.webpackChunksage||[]).push([[208],{208:function(e,t,a){a.r(t);var n=a(30);t.default=e=>{const t=e.getAttribute("data-score");(0,n.Z)({targets:e,innerHTML:[0,t],round:1,easing:"linear",duration:1500})}}}]);
