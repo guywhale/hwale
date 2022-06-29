@@ -1375,6 +1375,14 @@
     "delegate" "^3.2.0"
     "swup" "^2.0.0"
 
+"@swup/scroll-plugin@^1.1.0":
+  "integrity" "sha512-JnSxXzELHTcGr9OE1t/iwMVsr8rcLU9HG7WHdua2ayWF5r/nYr883r0GrJH0ZC6qfvPDwLfSPQhfH6uVS3VhqA=="
+  "resolved" "https://registry.npmjs.org/@swup/scroll-plugin/-/scroll-plugin-1.1.0.tgz"
+  "version" "1.1.0"
+  dependencies:
+    "@swup/plugin" "^1.0.0"
+    "scrl" "^1.0.0"
+
 "@trysound/sax@0.2.0":
   "integrity" "sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA=="
   "resolved" "https://registry.npmjs.org/@trysound/sax/-/sax-0.2.0.tgz"
@@ -5325,6 +5333,11 @@
     "ajv" "^8.8.0"
     "ajv-formats" "^2.1.1"
     "ajv-keywords" "^5.0.0"
+
+"scrl@^1.0.0":
+  "integrity" "sha512-nTS2W6UyxYfvOOjeXGXM1j140bm2ZUIjt0mEyGUHecFz2zU1CMYJ71dWPdlnSJR2mYOojY1R5qpo4Fi83O7tog=="
+  "resolved" "https://registry.npmjs.org/scrl/-/scrl-1.0.0.tgz"
+  "version" "1.0.0"
 
 "semver@^6.0.0", "semver@^6.1.1", "semver@^6.1.2", "semver@^6.3.0":
   "integrity" "sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw=="
