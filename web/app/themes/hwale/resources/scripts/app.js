@@ -1,6 +1,7 @@
 import {domReady} from '@roots/sage/client';
 import Alpine from 'alpinejs';
 import Swup from 'swup';
+import SwupFormsPlugin from '@swup/forms-plugin';
 import Headroom from "headroom.js";
 
 /**
@@ -23,6 +24,7 @@ const main = async (err) => {
   const swup = new Swup({
     animationSelector: '[class*="swup-transition-"]',
     cache: false,
+    plugins: [new SwupFormsPlugin()],
   });
 
   // reload init functions after swup page transition
