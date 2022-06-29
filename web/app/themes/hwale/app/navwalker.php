@@ -26,7 +26,7 @@ class MainNavWalker extends \Walker_Nav_Menu
         }
 
         $output .= "<li id=\"menu-item-{$item->ID}\" class=\"{$itemClasses}\">";
-        $output .= "<a href=\"{$item->url}\" class=\"{$linkClasses}\" {$currentAria}>";
+        $output .= "<a href=\"{$item->url}\" class=\"{$linkClasses}\" {$currentAria} [data-swup-preload]>";
         $output .= "<span class=\"{$numberClasses} {$numberColour}\">0{$item->menu_order}</span>";
         $output .= "<span class=\"{$lineClasses} {$lineColourPosition} {$interactClasses}\"></span>";
         $output .= "<span class=\"{$titleClasses} {$titlePosition} {$interactClasses}\">{$item->title}</span>";

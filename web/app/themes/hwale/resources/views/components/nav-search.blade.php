@@ -1,6 +1,7 @@
 <form action="/"
   method="GET"
   class="relative flex flex-wrap items-center max-w-xs md:max-w-md lg:max-w-full lg:items-start lg:flex-col lg:flex-nowrap py-3.75 lg:py-0 lg:pl-6 2xl:pl-11.25 group"
+  data-swup-form
   x-data="{
     active: {{ $isSearchPage }},
     telescopeUp() {

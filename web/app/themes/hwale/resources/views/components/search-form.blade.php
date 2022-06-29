@@ -1,5 +1,6 @@
 <form action="/"
   method="get"
+  data-swup-form
   x-data="{
     active: false,
     telescopeUp() {
