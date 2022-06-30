@@ -25,7 +25,7 @@ const main = async (err) => {
   //Initiate Swup
   const swup = new Swup({
     animationSelector: '[class*="swup-transition-"]',
-    cache: true,
+    cache: false,
     plugins: [
       new SwupFormsPlugin(),
       new SwupPreloadPlugin(),
@@ -39,6 +39,7 @@ const main = async (err) => {
   init();
 
   function init() {
+    console.log(document.cookie);
     // Headroom
     const header = document.querySelector('header');
     const headroom  = new Headroom(header, { offset: header.offsetHeight / 2 });
