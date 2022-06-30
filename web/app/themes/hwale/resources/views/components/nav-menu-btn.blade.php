@@ -1,5 +1,5 @@
 <button class="relative w-8.75 h-8.75 border-0 rotate-0 origin-center flex items-center transition-transform z-10 lg:hidden"
-  @click="open = ! open"
+  @click="open = ! open; document.querySelector('body').classList.toggle('overflow-y-hidden')"
   :class="open ? '-rotate-45' : 'rotate-0'"
   aria-label="Open nav menu"
 >

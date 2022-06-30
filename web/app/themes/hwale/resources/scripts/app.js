@@ -39,7 +39,12 @@ const main = async (err) => {
   init();
 
   function init() {
-    console.log(document.cookie);
+    // Ensures scroll lock applied to body by nav menu is removed
+    // when the page is changed by swup
+    if (document.querySelector('body').classList.contains('overflow-y-hidden')) {
+      document.querySelector('body').classList.remove('overflow-y-hidden');
+    }
+
     // Headroom
     const header = document.querySelector('header');
     const headroom  = new Headroom(header, { offset: header.offsetHeight / 2 });
