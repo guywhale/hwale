@@ -25,7 +25,7 @@ const main = async (err) => {
   //Initiate Swup
   const swup = new Swup({
     animationSelector: '[class*="swup-transition-"]',
-    cache: true,
+    cache: false,
     plugins: [
       new SwupFormsPlugin(),
       new SwupPreloadPlugin(),
@@ -39,6 +39,12 @@ const main = async (err) => {
   init();
 
   function init() {
+    // Ensures scroll lock applied to body by nav menu is removed
+    // when the page is changed by swup
+    if (document.querySelector('body').classList.contains('overflow-y-hidden')) {
+      document.querySelector('body').classList.remove('overflow-y-hidden');
+    }
+
     // Headroom
     const header = document.querySelector('header');
     const headroom  = new Headroom(header, { offset: header.offsetHeight / 2 });

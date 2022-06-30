@@ -129,17 +129,6 @@
 #white--cover,
 #red--cover {
   stroke-dasharray: 2200;
-  stroke-dashoffset: 0;
-  animation: drawDashedLines 1.5s linear 25ms forwards;
-}
-
-@keyframes drawDashedLines {
-  from {
-    stroke-dashoffset: 0;
-  }
-  to {
-    stroke-dashoffset: -2200;
-  }
 }
 
 /* Prevents FOUC, must be at end of file */
