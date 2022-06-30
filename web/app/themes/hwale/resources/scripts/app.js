@@ -25,7 +25,7 @@ const main = async (err) => {
   //Initiate Swup
   const swup = new Swup({
     animationSelector: '[class*="swup-transition-"]',
-    cache: false,
+    cache: true,
     plugins: [
       new SwupFormsPlugin(),
       new SwupPreloadPlugin(),
