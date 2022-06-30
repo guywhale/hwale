@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksage=self.webpackChunksage||[]).push([[235],{235:function(a,e,t){t.r(e);var n=t(30);e.default=a=>{const e=n.Z.path("#red--line");(0,n.Z)({targets:"#arrow",translateX:e("x"),translateY:e("y"),rotate:e("angle"),easing:"linear",duration:1500})}}}]);
