@@ -100,27 +100,7 @@ const ExplodingCode = (codeWrapper) => {
 
   typeOpeningFunction();
 
-  let explodeTimeout = 1
-  let floatTimeout = 300;
-  let ht1Timeout = 1;
-  let ht2Timeout = 1501;
-
-  if (document.querySelector('[data-explode]')) {
-    explodeTimeout = 7500
-    floatTimeout = 9000;
-    ht1Timeout = 9000;
-    ht2Timeout = 10500;
-  }
-
-  setTimeout(wrapLettersAndExplode, explodeTimeout);
-  setTimeout(floatingLetters, floatTimeout);
-  setTimeout(addCursorAndType.bind(null, '#homeText1', '#homeText1 .typed-text'), ht1Timeout);
-  setTimeout(() => {
-    document.querySelector('#homeText1 .animate-blinking-cursor').remove();
-    addCursorAndType('#homeText2', '#homeText2 .typed-text');
-  }, ht2Timeout);
-
-  function typeOpeningFunction() {
+  async function typeOpeningFunction() {
     // Creates paras
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
@@ -167,6 +147,7 @@ const ExplodingCode = (codeWrapper) => {
 
     // Type words into empty spans
     const words = document.querySelectorAll('.word');
+    let ready = false;
 
     for (let i = 0; i < words.length; i++) {
       const span = words[i];
@@ -179,15 +160,36 @@ const ExplodingCode = (codeWrapper) => {
 
         setTimeout(() => {
             typeText.run();
+
+            if (i === (words.length - 1)) {
+              ready = true;
+            }
+
+            if (ready) {
+              return new Promise(resolve => {
+                resolve(wrapLettersAndExplode());
+              });
+            }
         }, i * 150)// 150
+      } else {
+        if (i === (words.length - 1)) {
+          ready = true;
+        }
+
+        if (ready) {
+          return new Promise(resolve => {
+            resolve(wrapLettersAndExplode());
+          });
+        }
       }
     }
   }
 
-  function wrapLettersAndExplode() {
+  async function wrapLettersAndExplode() {
     // Unpack letters and remove line and word wrappers to allow for animation
     const lineParas = document.querySelectorAll('.line');
     const wordSpans = document.querySelectorAll('.line .word');
+    let ready = false;
 
     wordSpans.forEach(wordSpan => {
       const textNodes = Array.from(wordSpan.childNodes).filter(node => node.nodeType === 3);
@@ -211,7 +213,6 @@ const ExplodingCode = (codeWrapper) => {
       linePara.replaceWith(...linePara.childNodes);
     });
 
-    explodingLetters();
     codeWrapper.classList.add('opacity-50');
 
     if (document.querySelector('[data-explode]')) {
@@ -219,9 +220,17 @@ const ExplodingCode = (codeWrapper) => {
     } else {
       codeWrapper.classList.remove('opacity-0');
     }
+
+    ready = true;
+
+    if (ready) {
+      return new Promise(resolve => {
+        resolve(explodingLetters());
+      });
+    }
   }
 
-  function explodingLetters() {
+  async function explodingLetters() {
     const viewportWidth = document.documentElement.clientWidth;
     const letterTransXMin = -viewportWidth / 2;
     const letterTransXMax = viewportWidth / 2;
@@ -232,7 +241,7 @@ const ExplodingCode = (codeWrapper) => {
     let duration = 100;
 
     if (document.querySelector('[data-explode]')) {
-      duration = 2500;
+      duration = 2000;
     }
 
 
@@ -251,11 +260,25 @@ const ExplodingCode = (codeWrapper) => {
       scale: () => {
         return `${anime.random(80, 120)}%`;
       },
-      duration: duration
+      duration: duration,
+      complete: function(anime) {
+        const mediaQuery = window.matchMedia('(min-width: 1024px)')
+
+        if (mediaQuery.matches) {
+          floatingLetters();
+        }
+
+        addCursorAndType('#homeText1', '#homeText1 .typed-text');
+
+        setTimeout(() => {
+          document.querySelector('#homeText1 .animate-blinking-cursor').remove();
+          addCursorAndType('#homeText2', '#homeText2 .typed-text');
+        }, 1300);
+      }
     })
   }
 
-  function floatingLetters() {
+  async function floatingLetters() {
     anime({
       targets: '.letter',
       translateX: () => {
@@ -274,7 +297,7 @@ const ExplodingCode = (codeWrapper) => {
     })
   }
 
-  function addCursorAndType(textElement, targetSpan) {
+  async function addCursorAndType(textElement, targetSpan) {
     const textEl = document.querySelector(textElement);
     const textToType = textEl.getAttribute('data-text');
     const blinkingCursor = document.createElement('span');
