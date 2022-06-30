@@ -141,3 +141,9 @@
     stroke-dashoffset: -2200;
   }
 }
+
+/* Prevents FOUC, must be at end of file */
+html {
+  visibility: visible;
+  opacity: 1;
+}

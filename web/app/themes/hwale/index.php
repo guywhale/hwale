@@ -1,6 +1,13 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
   <head>
+    <style type="text/css">html{visibility: hidden;opacity:0;}html.hidden{visibility: hidden;opacity:0;}</style>
+    <script type="text/javascript">
+      document.querySelector('html').classList.add('hidden');
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelector('html').classList.remove('hidden');
+      });
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
