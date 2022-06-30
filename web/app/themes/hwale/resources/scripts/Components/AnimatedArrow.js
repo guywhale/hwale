@@ -8,9 +8,15 @@ const AnimatedArrow = (arrow) => {
     translateX: pathRed('x'),
     translateY: pathRed('y') ,
     rotate: pathRed('angle'),
-    easing: 'linear',
+    easing: 'easeOutSine',
     duration: 1500,
-    // loop: true
+  });
+
+  anime({
+    targets: '#white--cover, #red--cover',
+    strokeDashoffset: [0, -2200],
+    easing: 'easeOutSine',
+    duration: 1500,
   });
 }
 
