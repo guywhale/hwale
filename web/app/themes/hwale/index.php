@@ -1,6 +1,7 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
   <head>
+    <style>html{visibility: hidden;opacity:0;}</style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
