@@ -28,17 +28,17 @@
                 alt="{{ $slide['alt'] }}"
                 srcset="
                   {{ $slide['image'] }} 767w,
-                  {{ $slide['image'] }} 449w,
-                  {{ $slide['image'] }} 338w,
-                  {{ $slide['image'] }} 389w,
-                  {{ $slide['image'] }} 485w
+                  {{ $slide['image'] }} 451w,
+                  {{ $slide['image'] }} 339w,
+                  {{ $slide['image'] }} 391w,
+                  {{ $slide['image'] }} 487w
                 "
                 sizes="
                   (max-width: 767px) 767px,
-                  (max-width: 1023px) 449px,
-                  (max-width: 1279px) 338px,
-                  (max-width: 1535px) 389px,
-                  485px
+                  (max-width: 1023px) 451px,
+                  (max-width: 1279px) 339px,
+                  (max-width: 1535px) 391px,
+                  487px
                 "
                 class="object-cover w-full h-full swiper-slide"
               >
