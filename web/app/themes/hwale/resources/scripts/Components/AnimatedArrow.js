@@ -2,6 +2,7 @@ import anime from 'animejs/lib/anime.es.js';
 
 const AnimatedArrow = (arrow) => {
   const pathRed = anime.path('#red--line');
+  document.querySelector('#arrow').style.opacity = 1;
 
   anime({
     targets: '#arrow',

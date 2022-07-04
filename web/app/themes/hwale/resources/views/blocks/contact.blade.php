@@ -26,7 +26,7 @@
   </div>
 
   <div class="relative -top-13.5 w-[200%] md:w-[150%] md:absolute md:top-[33vh] lg:top-[33vh] xl:top-[20vh] lg:right-0 lg:w-full-60 -z-20">
-    <div id="arrow" class="absolute w-[10.37%] -top-[20%] -left-[6.5%] inline-block">
+    <div id="arrow" class="absolute w-[10.37%] -top-[20%] -left-[6.5%] inline-block opacity-0">
       {!! get_svg('images.animated-arrow') !!}
     </div>
     {!! get_svg('images.animated-lines', 'w-full h-auto') !!}
