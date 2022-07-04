@@ -56,9 +56,6 @@ class FloatingTitle extends Component
         if (is_404()) {
             $this->pageTitle = '404';
             $this->pageNumber = '';
-            // $this->contactH1Size = 'lg:text-h1-contact xl:text-h1';
-            // $this->contactNumberPosition = 'lg:-top-17 xl:-top-32.5 lg:-left-12';
-            // $this->contactNumberSize = 'lg:text-h1-contact-number xl:text-h1-number';
         }
     }
 
