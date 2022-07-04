@@ -1,22 +1,22 @@
 {
   "app": {
     "js": [
-      "runtime.6f2475.js",
+      "runtime.9b1f8e.js",
       "vendor/app.3892c4.js",
       "app.b57eff.js"
     ],
     "css": [
-      "app.93a70c.css"
+      "app.0f05e0.css"
     ],
     "dependencies": []
   },
   "editor": {
     "js": [
-      "runtime.6f2475.js",
+      "runtime.9b1f8e.js",
       "editor.5f39da.js"
     ],
     "css": [
-      "editor.97a8ab.css"
+      "editor.c5d0d1.css"
     ],
     "dependencies": [
       "wp-blocks"

@@ -1,4 +1,4 @@
-<a href="{{ $link }}" class="block group py-12 lg:py-7.5 border-t last:border-b border-white">
+<a href="{{ $link }}" class="block group py-12 lg:py-7.5 border-t last:border-b border-white animate-slide-in-left animate-delay-900 opacity-0">
   <article @php(post_class('flex flex-col lg:flex-row lg:items-center'))>
     <div class="transition-all border border-white lg:max-w-300 drop-shadow-none group-hover:border-4 group-hover:drop-shadow-preview-image">
       @if ($previewImage)
