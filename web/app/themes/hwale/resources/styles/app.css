@@ -57,6 +57,10 @@
     animation-delay: 300ms;
   }
 
+  .animate-delay-900 {
+    animation-delay: 900ms;
+  }
+
   .animate-delay-1500 {
     animation-delay: 1500ms;
   }
