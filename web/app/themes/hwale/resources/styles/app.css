@@ -94,7 +94,7 @@
 /* Slider */
 
 [data-image-slider] {
-  @apply absolute md:top-[25px] md:left-[77px] md:w-[449px] md:h-[280px] lg:top-[19px] lg:left-[58px] lg:w-[338px] lg:h-[211px] xl:top-[22px] xl:left-[67px] xl:w-[389px] xl:h-[243px] 2xl:top-[27px] 2xl:left-[83px] 2xl:w-[485px] 2xl:h-[303px];
+  @apply absolute md:top-[25px] md:left-[75px] md:w-[451px] md:h-[282px] lg:top-[19px] lg:left-[57px] lg:w-[339px] lg:h-[212px] xl:top-[22px] xl:left-[65px] xl:w-[391px] xl:h-[244px] 2xl:top-[27px] 2xl:left-[81px] 2xl:w-[487px] 2xl:h-[304px];
 }
 
 .prev-slide,
