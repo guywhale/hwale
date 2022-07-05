@@ -178,6 +178,8 @@ class WorkSlider extends Block
         $workQuery = new WP_Query([
             'post_type' => 'work',
             'status'    => 'publish',
+            'orderby'   => 'date',
+            'order'     => 'ASC',
         ]);
 
         if ($workQuery->have_posts()) {
