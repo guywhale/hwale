@@ -1,6 +1,15 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E815JXWLQ9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-E815JXWLQ9');
+    </script>
     <style type="text/css">html{visibility: hidden;opacity:0;}html.hidden{visibility: hidden;opacity:0;}</style>
     <script type="text/javascript">
       document.querySelector('html').classList.add('hidden');
