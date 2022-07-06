@@ -4,6 +4,7 @@ import Swup from 'swup';
 import SwupFormsPlugin from '@swup/forms-plugin';
 import SwupPreloadPlugin from '@swup/preload-plugin';
 import SwupScrollPlugin from '@swup/scroll-plugin';
+import SwupGtagPlugin from 'swup-gtag-plugin';
 import Headroom from "headroom.js";
 
 /**
@@ -30,6 +31,7 @@ const main = async (err) => {
       new SwupFormsPlugin(),
       new SwupPreloadPlugin(),
       new SwupScrollPlugin({ doScrollingRightAway: true }),
+      new SwupGtagPlugin({ gaMeasurementId: "G-E815JXWLQ9" }),
     ],
   });
 
