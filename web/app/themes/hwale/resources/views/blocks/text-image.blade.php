@@ -1,7 +1,7 @@
 <section class="{{ $block->classes }} md:h-screen pt-25 pb-28 md:pb-0 lg:pt-32">
   <div class="container">
     <div class="flex flex-col lg:flex-row">
-        <div class="order-2 pt-11 md:pt-16 lg:pt-0 xl:pt-10 2xl:pt-24 lg:w-2/3 xl:w-1/2 lg:order-1">
+        <div class="order-2 pt-11 md:pt-16 lg:pt-0 2xl:pt-24 lg:w-2/3 xl:w-1/2 lg:order-1">
           @if ($text)
             <div class="relative z-10 cms animate-slide-in-left">
               {!! $text !!}
