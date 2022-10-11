@@ -217,6 +217,9 @@ class WorkSlider extends Block
         // vertical direction of images
         $slideContent = array_reverse($slideContent, true);
 
+        // Ensure newest work projects display first on mobile
+        $slideBoth = array_reverse($slideBoth, true);
+
         return [
             'images' => $slideImages,
             'content' => $slideContent,
