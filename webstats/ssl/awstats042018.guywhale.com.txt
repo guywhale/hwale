@@ -1,0 +1,361 @@
+AWSTATS DATA FILE 7.4 (build 20140726)
+# If you remove this file, all statistics for date 201804 will be lost/reset.
+# Last config file used to build this data file was /home/guywhale/tmp/awstats/ssl/awstats.guywhale.com.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 28
+POS_GENERAL 2013                
+POS_TIME 2685                
+POS_VISITOR 7319                
+POS_DAY 8350                
+POS_DOMAIN 3355                
+POS_LOGIN 3701                
+POS_ROBOT 3856                
+POS_WORMS 4292                
+POS_EMAILSENDER 4423                
+POS_EMAILRECEIVER 4566                
+POS_SESSION 8995                
+POS_SIDER 9175                
+POS_FILETYPES 4701                
+POS_DOWNLOADS 4983                
+POS_OS 5031                
+POS_BROWSER 5218                
+POS_SCREENSIZE 5644                
+POS_UNKNOWNREFERER 5718                
+POS_UNKNOWNREFERERBROWSER 6110                
+POS_ORIGIN 6245                
+POS_SEREFERRALS 6381                
+POS_PAGEREFS 6525                
+POS_SEARCHWORDS 6703                
+POS_KEYWORDS 6855                
+POS_MISC 2348                
+POS_ERRORS 6914                
+POS_CLUSTER 3557                
+POS_SIDER_404 7010                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20180501024218 1 0 3717047061765
+FirstTime 20180401025804
+LastTime 20180430202617
+LastUpdate 20180501045557 1 0 0 0 0
+TotalVisits 124                 
+TotalUnique 24                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 24                  
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 72 0
+TotalMisc 0 0 0
+PDFSupport 0 0 0
+JavascriptDisabled 0 0 0
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+RealPlayerSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 7 7 17620 4 22 390640
+1 4 4 35240 1 1 0
+2 5 5 35236 2 2 17614
+3 3 25 792810 3 25 0
+4 15 29 381446 2 9 258606
+5 8 8 47279 6 6 70456
+6 5 19 293336 11 12 158552
+7 0 0 0 0 0 0
+8 7 7 52854 2 4 52
+9 2 2 17614 1 1 0
+10 2 2 17618 0 0 0
+11 6 6 35236 3 9 17640
+12 6 22 408234 1 4 240862
+13 4 4 17618 1 3 52
+14 4 4 35232 2 2 0
+15 2 16 293336 1 1 0
+16 4 4 17618 2 5 258502
+17 7 23 425850 1 3 0
+18 21 21 107378 6 9 17692
+19 10 10 88100 1 6 52
+20 8 22 328576 2 3 26
+21 147 321 11595744 12 39 481962
+22 176 183 8100244 14 30 35280
+23 10 10 88092 4 5 17614
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 25 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 9
+th 308 527 20808954
+bg 88 104 390612
+us 46 46 559887
+de 11 67 1296642
+cn 4 4 70488
+gb 3 3 52862
+nl 1 1 17622
+jp 1 1 17622
+sc 1 1 17622
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 25 first Hits must be first (order not required for others)
+BEGIN_ROBOT 8
+google[_+\s]web[_+\s]preview 18 390614 20180420005033 0
+no_user_agent 18 299438 20180428110508 0
+googlebot 13 338 20180424212303 13
+bot[\s_+:,\.\;\/\\-] 11 286 20180423084350 11
+php 5 1204180 20180427215234 0
+unknown 2 52 20180420121630 2
+crawl 2 35228 20180428065022 0
+netcraft 2 35228 20180409165315 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 12
+svg 7 8052 0 0
+css 72 907371 0 0
+ttf 4 368880 0 0
+js 122 1822223 0 0
+gif 14 37759 0 0
+jpeg 11 695874 0 0
+Unknown 2 415 0 0
+png 11 56053 0 0
+jpg 54 1824229 0 0
+php 358 15589656 0 0
+html 96 1881839 0 0
+woff 3 39960 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 0
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 10
+winnt 510 307
+linux 66 10
+win8 1 1
+bsdopenbsd 1 1
+win8.1 1 1
+winxp 4 4
+Unknown 101 101
+macosx 66 34
+winlong 1 1
+win7 3 3
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 19
+chrome24.0.1292.0 1 1
+chrome34.0.1847.116 1 1
+msie11.0 1 1
+safari10.1 1 1
+mozilla 9 9
+netscape 8 8
+firefox50.0 78 6
+chrome41.0.2225.0 1 1
+firefox21.0 1 1
+firefox55.0 1 1
+chrome58.0.3029.110 8 8
+chrome58.0.3029.96 1 1
+chrome5.0.375.99 4 4
+Unknown 86 86
+chrome41.0.2228.0 1 1
+chrome36.0.1985.125 1 1
+chrome61.0.3163.100 18 18
+chrome65.0.3325.181 527 308
+chrome49.0.2623.75 6 6
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 4
+Mozilla/5.0_zgrab/0.x_(compatible;_Researchscan/t12sns;__http://researchscan.comsys.rwth-aachen.de) 20180425210451
+Mozilla/5.0_zgrab/0.x_(compatible;_Researchscan/t13rl;__http://researchscan.comsys.rwth-aachen.de) 20180430185257
+WordPress/4.9.4;_https://guywhale.com 20180430202615
+Mozilla 20180410183422
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 1
+WordPress/4.9.4;_https://guywhale.com 20180430202615
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 32 88
+From1 4 4
+From2 0 0
+From3 7 7
+From4 420 655
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 0
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 25 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 1
+https://77.104.150.61:443 7 7
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 25 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 2
+302 18 0
+301 40 238
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referrer
+BEGIN_SIDER_404 0
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 25 first Hits must be first (order not required for others)
+BEGIN_VISITOR 24
+171.96.191.232 303 490 20027726 20180402030643
+77.104.150.252 86 86 0 20180430202615
+104.192.74.21 16 16 89764 20180410183422
+54.67.59.131 11 11 205841 20180430011133
+54.183.165.74 7 7 123326 20180428080829
+137.226.113.27 6 6 105684 20180430185257
+60.165.35.10 4 4 70488 20180424040615
+138.197.136.50 4 4 0 20180412002603
+183.88.84.65 3 19 390612 20180412173709
+64.233.172.130 3 3 52860 20180422190131
+137.226.113.22 3 45 880008 20180430202617
+163.172.4.153 3 3 52862 20180425084137
+171.100.27.130 2 18 390616 20180404123012
+82.118.240.130 2 18 390612 20180410213550
+66.102.7.3 1 1 17620 20180402191133
+137.226.113.23 1 15 293336 20180416044509
+106.185.52.36 1 1 17622 20180428013934
+46.101.80.192 1 1 17622 20180407020237
+165.231.90.174 1 1 17622 20180420045131
+137.226.113.26 1 1 17614 20180415220149
+54.213.219.74 1 1 17618 20180408230354
+66.102.7.1 1 1 17620 20180403234418
+64.233.172.128 1 1 17620 20180420005029
+34.214.242.232 1 1 17618 20180407102004
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 27
+20180401 315 494 19563480 9
+20180402 9 31 845666 8
+20180403 2 2 17620 2
+20180404 6 22 390616 4
+20180405 5 5 35238 5
+20180406 2 2 17618 2
+20180407 6 6 35240 6
+20180408 5 5 47279 4
+20180409 3 3 17618 3
+20180410 25 41 497994 8
+20180412 13 29 425852 8
+20180413 1 1 0 1
+20180414 5 5 17618 4
+20180415 6 6 52846 5
+20180416 2 16 293336 2
+20180417 4 4 17622 3
+20180418 4 4 17618 4
+20180419 2 2 17618 2
+20180420 6 6 35242 5
+20180421 5 5 35238 5
+20180422 2 2 17620 2
+20180423 7 21 328572 7
+20180424 10 10 88102 7
+20180425 4 4 35232 4
+20180426 2 2 17618 2
+20180428 6 6 35240 6
+20180430 6 20 328568 6
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 4
+15mn-30mn 2
+30s-2mn 1
+0s-30s 115
+30mn-1h 6
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 25 first Pages must be first (order not required for others)
+BEGIN_SIDER 23
+/wp-admin/admin-ajax.php 238 2411569 0 1
+/wp-cron.php 86 0 73 73
+/ 79 1704484 50 45
+/wp-admin/post.php 18 11347124 0 0
+/wp-admin/load-scripts.php 6 397020 0 0
+/learning-portfolio/ 4 6688 0 0
+/wp-content/themes/Divi/core/admin/fonts/modules.ttf 4 368880 0 3
+/wp-admin/edit.php 4 269167 0 0
+/craft-bar/ 3 40578 0 1
+/wp-login.php 2 5500 1 0
+/wp-admin/post-new.php 2 1033082 0 0
+/wp-admin/load-styles.php 2 126194 0 0
+/learning-portfolio/contact.html 2 4356 0 1
+/learning-portfolio/portfolio.html 2 6172 0 0
+/learning-portfolio/about.html 2 4958 0 0
+/learning-portfolio/services.html 2 5306 0 0
+/wp-json/yoast/v1/statistics 1 288 0 0
+/wp-includes/js/tinymce/skins/lightgray/fonts/tinymce.woff 1 17484 0 0
+/wp-content/themes/Divi/core/admin/fonts/builder.woff 1 21420 0 0
+/wp-json/wp/v2/ 1 50797 0 0
+/wp-content/plugins/jetpack/_inc/fonts/jetpack/jetpack.woff 1 1056 0 0
+/wp-admin/ 1 58500 0 0
+/wp-json/yoast/v1/ryte 1 127 0 0
+END_SIDER

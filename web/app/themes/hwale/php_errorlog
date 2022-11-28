@@ -1,0 +1,4 @@
+[30-Jun-2022 16:28:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function language_attributes() in /home/customer/www/guywhale.com/web/app/themes/hwale/index.php:2
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/guywhale.com/web/app/themes/hwale/index.php on line 2

@@ -1,0 +1,100 @@
+BPS MSCAN LOG
+======================
+======================
+
+
+[MScan Scan Start: July 2, 2022 4:12 pm]
+MScan Status: 
+Scan Time Calculation: Start Count total files to scan.
+Scan Time Calculation: Max File Size Limit to Scan: 1000 KB
+Scan Time Calculation: Total Skipped Files (larger than 1000 KB): 1
+Scan Time Calculation: Total WP Core Files to Scan: 8
+Scan Time Calculation: Total Plugin Files to Scan: 0
+Scan Time Calculation: Total Theme Files to Scan: 0
+Scan Time Calculation: Total non-WP php, html, etc Files to Scan: 2819
+Scan Time Calculation: Total Files to Scan: 2827
+Scan Time Calculation: Website Folders & Files To Scan: app, wp-admin, wp-content, wp-includes
+Scan Time Calculation: WP Core Hash Time Estimate: +110 Seconds
+Scan Time Calculation: Plugins Hash Time Estimate: +50 Seconds
+Scan Time Calculation: Themes Hash Time Estimate: +130 Seconds
+Scan Time Calculation: WP Core Files Time Estimate: +0 Seconds
+Scan Time Calculation: Plugin Files Time Estimate: +0 Seconds
+Scan Time Calculation: Theme Files Time Estimate: +0 Seconds
+Scan Time Calculation: non-WP php, html, etc Files Time Estimate: +19 Seconds
+Scan Time Calculation: DB Size Time Estimate: +4 Seconds
+Scan Time Calculation: Session Scan Variance Time Estimate: +60 Seconds
+Scan Time Calculation: Scan Time Estimate: 373 Seconds
+MScan Status: 9
+Scan Time Calculation Completion Time: 00:00:00
+WP Zip File Download: Start wordpress-5.9.2.zip zip file download.
+WP Zip File Download: Zip file download successful: wordpress-5.9.2.zip
+WP Zip File Download: FailSafe Check: Total number of zip files downloaded: 1.
+WP Zip File Download Completion Time: 00:00:03
+WP Zip File Extraction: Start ZipArchive zip file extraction.
+WP Zip File Extraction Completion Time: 00:00:00
+WP MD5 File Hash Maker & Cleanup: Start creating the wp-hashes.php file.
+WP MD5 File Hash Maker & Cleanup: wp-hashes.php file created.
+WP MD5 File Hash Maker & Cleanup: Start /bps-backup/wp-hashes/ folder cleanup.
+WP MD5 File Hash Maker & Cleanup: WP wordpress-5.9.2.zip file deleted.
+WP MD5 File Hash Maker & Cleanup: Extracted /bps-backup/wp-hashes/wordpress/ folder deleted.
+WP MD5 File Hash Maker & Cleanup Completion Time: 00:00:00
+Plugin Zip File Download: Start Plugin zip file downloads.
+Plugin Zip File Download: WP_Error: Unable to download Plugin zip file: advanced-custom-fields-pro.5.12.1.zip from WordPress.org.
+Plugin Zip File Download: Zip file download successful: bulletproof-security.6.4.zip
+Plugin Zip File Download: Zip file download successful: optimole-wp.3.4.3.zip
+Plugin Zip File Download: Zip file download successful: sg-cachepress.7.1.5.zip
+Plugin Zip File Download: Zip file download successful: wordpress-seo.19.2.zip
+Plugin Zip File Download: Total number of zip files downloaded: 4.
+Plugin Zip File Download Completion Time: 00:00:20
+Plugin Zip File Extraction: Start ZipArchive zip file extraction.
+Plugin Zip File Extraction ZipArchive: Zip file extraction successful: bulletproof-security.6.4.zip.
+Plugin Zip File Extraction ZipArchive: Zip file extraction successful: optimole-wp.3.4.3.zip.
+Plugin Zip File Extraction ZipArchive: Zip file extraction successful: sg-cachepress.7.1.5.zip.
+Plugin Zip File Extraction ZipArchive: Zip file extraction successful: wordpress-seo.19.2.zip.
+Plugin Zip File Extraction Completion Time: 00:00:00
+Plugin MD5 File Hash Maker: Start creating the plugin-hashes.php file.
+Plugin MD5 File Hash Maker & Cleanup: plugin-hashes.php file created.
+Plugin MD5 File Hash Maker & Cleanup: Start /bps-backup/plugin-hashes/ folder cleanup.
+Plugin MD5 File Hash Maker & Cleanup: Plugin Zip files deleted.
+Plugin MD5 File Hash Maker & Cleanup: Extracted Plugin folders deleted.
+Plugin MD5 File Hash Maker & Cleanup Completion Time: 00:00:00
+Theme Zip File Download: Start Theme zip file downloads.
+Theme Zip File Download: WP_Error: Unable to download Theme zip file: hwale.10.1.4.zip from WordPress.org.
+Theme Zip File Download: Zip file download successful: twentyeleven.4.0.zip
+Theme Zip File Download: Zip file download successful: twentyfifteen.3.1.zip
+Theme Zip File Download: Zip file download successful: twentyfourteen.3.3.zip
+Theme Zip File Download: Zip file download successful: twentynineteen.2.2.zip
+Theme Zip File Download: Zip file download successful: twentyseventeen.2.9.zip
+Theme Zip File Download: Zip file download successful: twentysixteen.2.6.zip
+Theme Zip File Download: Zip file download successful: twentyten.3.6.zip
+Theme Zip File Download: Zip file download successful: twentythirteen.3.5.zip
+Theme Zip File Download: Zip file download successful: twentytwelve.3.6.zip
+Theme Zip File Download: Zip file download successful: twentytwenty.1.9.zip
+Theme Zip File Download: Zip file download successful: twentytwentyone.1.5.zip
+Theme Zip File Download: Zip file download successful: twentytwentytwo.1.1.zip
+Theme Zip File Download: Total number of zip files downloaded: 12.
+Theme Zip File Download Completion Time: 00:00:48
+Theme Zip File Extraction: Start ZipArchive zip file extraction.
+Theme Zip File Extraction ZipArchive: Zip file extraction successful: twentyeleven.4.0.zip.
+Theme Zip File Extraction ZipArchive: Zip file extraction successful: twentyfifteen.3.1.zip.
+Theme Zip File Extraction ZipArchive: Zip file extraction successful: twentyfourteen.3.3.zip.
+Theme Zip File Extraction ZipArchive: Zip file extraction successful: twentynineteen.2.2.zip.
+Theme Zip File Extraction ZipArchive: Zip file extraction successful: twentyseventeen.2.9.zip.
+Theme Zip File Extraction ZipArchive: Zip file extraction successful: twentysixteen.2.6.zip.
+Theme Zip File Extraction ZipArchive: Zip file extraction successful: twentyten.3.6.zip.
+Theme Zip File Extraction ZipArchive: Zip file extraction successful: twentythirteen.3.5.zip.
+Theme Zip File Extraction ZipArchive: Zip file extraction successful: twentytwelve.3.6.zip.
+Theme Zip File Extraction ZipArchive: Zip file extraction successful: twentytwenty.1.9.zip.
+Theme Zip File Extraction ZipArchive: Zip file extraction successful: twentytwentyone.1.5.zip.
+Theme Zip File Extraction ZipArchive: Zip file extraction successful: twentytwentytwo.1.1.zip.
+Theme Zip File Extraction Completion Time: 00:00:00
+Theme MD5 File Hash Maker: Start creating the theme-hashes.php file.
+Theme MD5 File Hash Maker: WP Theme CR LF conversion to LF format.
+Theme MD5 File Hash Maker & Cleanup: theme-hashes.php file created.
+Theme MD5 File Hash Maker & Cleanup: Start /bps-backup/theme-hashes/ folder cleanup.
+Theme MD5 File Hash Maker & Cleanup: Theme Zip files deleted.
+Theme MD5 File Hash Maker & Cleanup: Extracted Theme folders deleted.
+Theme MD5 File Hash Maker & Cleanup Completion Time: 00:00:00
+MScan Status: 9
+Scanning Files: Aborted. The Hash Maker is creating WP Core, Plugin or Theme file hashes.
+Hash Maker Completion Time: 00:01:15
