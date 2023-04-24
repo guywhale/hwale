@@ -12,6 +12,8 @@ config:
 
 # Add the following if you plan to use Sage as a starter theme
 services:
+  myservice:
+    type: phpmyadmin
   theme:
     type: node
     services:
