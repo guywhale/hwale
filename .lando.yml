@@ -1,24 +1,24 @@
 name: guywhale
 recipe: wordpress
-proxy:                
-  theme:              # Optional: add this if you include the Sage specific config down below
-    - localhost:3000
+proxy:
+    theme: # Optional: add this if you include the Sage specific config down below
+        - localhost:3000
 config:
-  php: '7.4'
-  via: nginx
-  webroot: web
-  database: mariadb
-  xdebug: true
+    php: "8.1"
+    via: nginx
+    webroot: web
+    database: mariadb
+    xdebug: true
 
 # Add the following if you plan to use Sage as a starter theme
 services:
-  myservice:
-    type: phpmyadmin
-  theme:
-    type: node
-    services:
-      ports:
-        - 3000:3000
+    myservice:
+        type: phpmyadmin
+    theme:
+        type: node
+        services:
+            ports:
+                - 3000:3000
 tooling:
-  yarn:
-    service: theme
+    yarn:
+        service: theme
