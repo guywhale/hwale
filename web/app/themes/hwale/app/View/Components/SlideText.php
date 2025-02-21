@@ -14,11 +14,11 @@ class SlideText extends Component
      * Create a new component instance.
      * @param  string  $title
      * @param  string  $content
-     * @param  array   $tags
+     * @param  mixed[]   $tags
      * @param  array   $button
      * @return void
      */
-    public function __construct(string $title = null, string $content = null, array $tags = null, array $button = null)
+    public function __construct(string $title = null, string $content = null, $tags = null, array $button = null)
     {
         $this->title = $title;
         $this->content = $content;
