@@ -54,7 +54,7 @@
         "roots/wp-password-bcrypt": "1.1.0",
         "roots/acorn": "^2.0",
         "wpackagist-plugin/sg-cachepress": "^7.1",
-        "wpengine/advanced-custom-fields": "^6.3"
+        "wpengine/advanced-custom-fields-pro": "^6.3"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.6.2",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0adab15f117d224eb486b571d264e4fd",
+    "content-hash": "2d9ed442a6bc5fe72537c20cab28a0c9",
     "packages": [
         {
             "name": "brick/math",
@@ -4709,17 +4709,18 @@
             "homepage": "https://wordpress.org/plugins/sg-cachepress/"
         },
         {
-            "name": "wpengine/advanced-custom-fields",
+            "name": "wpengine/advanced-custom-fields-pro",
             "version": "6.3.12",
             "dist": {
                 "type": "zip",
-                "url": "https://connect.advancedcustomfields.com/v2/plugins/composer_download?s=composer&p=acf&t=6.3.12"
+                "url": "https://connect.advancedcustomfields.com/v2/plugins/composer_download?s=composer&p=pro&t=6.3.12"
             },
             "require": {
                 "composer/installers": "~1.0 || ~2.0"
             },
             "replace": {
-                "wpackagist-plugin/advanced-custom-fields": "self.version"
+                "wpackagist-plugin/advanced-custom-fields": "self.version",
+                "wpengine/advanced-custom-fields": "self.version"
             },
             "type": "wordpress-plugin"
         }
@@ -5695,6 +5696,6 @@
     "platform": {
         "php": ">=7.4"
     },
-    "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
 }

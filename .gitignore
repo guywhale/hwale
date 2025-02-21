@@ -27,3 +27,6 @@ wp-cli.local.yml
 
 # SQL from live site
 guywhale-new-db.sql
+
+#ACF License
+auth.json
