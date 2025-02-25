@@ -24,7 +24,7 @@
   <input type="search"
     name="s"
     id="navSearch"
-    class="basis-full text-nav-search-sm md:text-nav-search-lg ml-10.75 md:ml-15.5 lg:ml-0 lg:text-nav-search pr-10 md:pr-12 lg:pr-8.5 w-40 rounded-none bg-transparent border-t-0 border-r-0 border-b-2 border-l-0 text-white focus:outline-none active:outline-none transition-colors"
+    class="basis-full text-nav-search-sm md:text-nav-search-lg ml-10.75 md:ml-15.5 lg:ml-0 lg:text-nav-search pr-10 md:pr-12 lg:pr-8.5 w-40 rounded-none bg-transparent border-t-0 border-r-0 border-b-2 border-l-0 text-white focus:outline-hidden active:outline-hidden transition-colors"
     @focus="active = true; telescopeUp()"
     @blur="active = {{ $isSearchPage }}; telescopeDown()"
     :class="active ? 'border-b-red' : 'border-b-grey'"

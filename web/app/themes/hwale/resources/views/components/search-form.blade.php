@@ -27,7 +27,7 @@
     @focus="active = true; telescopeUp()"
     @blur="active = false; telescopeDown()"
     :class="active ? 'border-b-red' : 'border-b-grey'"
-    class="w-full py-2 pr-12 text-white transition-colors bg-transparent border-t-0 border-b-2 border-l-0 border-r-0 rounded-none focus:outline-none active:outline-none placeholder:text-grey"
+    class="w-full py-2 pr-12 text-white transition-colors bg-transparent border-t-0 border-b-2 border-l-0 border-r-0 rounded-none focus:outline-hidden active:outline-hidden placeholder:text-grey"
   >
   <button type="submit"
     class="absolute bottom-0 right-0"
