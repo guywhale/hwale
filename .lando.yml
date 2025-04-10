@@ -19,6 +19,6 @@ services:
         services:
             ports:
                 - 3000:3000
-tooling:
-    yarn:
-        service: theme
+# tooling:
+#     yarn:
+#         service: theme
